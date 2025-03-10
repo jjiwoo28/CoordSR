@@ -1,0 +1,22 @@
+{
+    "path": "250227_test_coordX_SRxN_PS_x2_relu_d0_w128_cd8_cd256_R1_2_decom_dim_us_lr0.0005_gem_cnn_depth_4_cnn_width_64_after_network_type_feature",
+    "depth": 0,
+    "width": 256,
+    "coord_depth": 8,
+    "coord_width": 256,
+    "dataset_name": "gem",
+    "model_info": "relu",
+    "lr": 0.0005,
+    "batch_size": 2,
+    "decom_dim": "us",
+    "R": 1,
+    "schdule_type": "linear",
+    "res_depth": 4,
+    "res_width": 64,
+    "after_network_type": "feature",
+    "cnn_type": "sr_pixel_shuffle",
+    "result": {
+        "0": 0
+    },
+    "result_time": {}
+}

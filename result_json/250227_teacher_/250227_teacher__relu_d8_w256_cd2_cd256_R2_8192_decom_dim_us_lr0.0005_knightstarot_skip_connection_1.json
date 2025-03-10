@@ -1,0 +1,18 @@
+{
+    "path": "250227_teacher__relu_d8_w256_cd2_cd256_R2_8192_decom_dim_us_lr0.0005_knightstarot_skip_connection_1",
+    "depth": 8,
+    "width": 256,
+    "coord_depth": 2,
+    "coord_width": 256,
+    "dataset_name": "knightstarot",
+    "model_info": "relu",
+    "lr": 0.0005,
+    "batch_size": 8192,
+    "decom_dim": "us",
+    "R": 2,
+    "schdule_type": "linear",
+    "result": {
+        "0": 0
+    },
+    "result_time": {}
+}

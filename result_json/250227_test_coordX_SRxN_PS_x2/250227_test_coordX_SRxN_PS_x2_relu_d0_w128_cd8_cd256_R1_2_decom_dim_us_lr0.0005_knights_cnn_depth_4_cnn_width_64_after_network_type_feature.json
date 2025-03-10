@@ -1,0 +1,39 @@
+{
+    "path": "250227_test_coordX_SRxN_PS_x2_relu_d0_w128_cd8_cd256_R1_2_decom_dim_us_lr0.0005_knights_cnn_depth_4_cnn_width_64_after_network_type_feature",
+    "depth": 0,
+    "width": 256,
+    "coord_depth": 8,
+    "coord_width": 256,
+    "dataset_name": "knights",
+    "model_info": "relu",
+    "lr": 0.0005,
+    "batch_size": 2,
+    "decom_dim": "us",
+    "R": 1,
+    "schdule_type": "linear",
+    "res_depth": 4,
+    "res_width": 64,
+    "after_network_type": "feature",
+    "cnn_type": "sr_pixel_shuffle",
+    "result_time": {
+        "10": {
+            "inference_time": 9.501614146762424
+        },
+        "20": {
+            "inference_time": 9.707086139255102
+        },
+        "30": {
+            "inference_time": 8.91197517183092
+        },
+        "40": {
+            "inference_time": 7.417955504523383
+        }
+    },
+    "result": {
+        "0": 0,
+        "10": 28.58548605805607,
+        "20": 28.923041977799098,
+        "30": 29.284434732904813,
+        "40": 29.355615191585684
+    }
+}
