@@ -18,6 +18,7 @@ from skimage.metrics import peak_signal_noise_ratio
 
 import torch
 import torch.nn
+import torch.nn.functional as F  # F 모듈 추가
 import torchvision
 from torch.optim.lr_scheduler import LambdaLR
 
@@ -51,7 +52,7 @@ def generate_fixed_coords_fully(x_fixed, y_fixed,img_w, img_h, scale, device='cp
         img_w: 이미지 너비
         img_h: 이미지 높이
         scale: 스케일 팩터
-        device: 연산 장치
+        device: 연산 장치breakpoint()
     Returns:
         (1, img_h, img_w, 4) 형태의 좌표 텐서
     """
@@ -253,7 +254,7 @@ def run(opt):
     logger.set_metadata("sr_scale", opt.sr_scale)
     logger.set_metadata("pseudo_data_path", opt.pseudo_data_path)
     logger.set_metadata("coordx_model_path", opt.coordx_model_path)
-    logger.set_metadata("cnn_type", opt.cnn_type)
+    #logger.set_metadata("cnn_type", opt.cnn_type)
     
     
     
@@ -549,7 +550,7 @@ def run(opt):
     sampling_val = sampling_val_fully
         
 
-    #       
+    #breakpoint()
     model = models_R2L.R2L(cnn_type=opt.cnn_type)
     print(model)    
     # input_ckpt_path = os.path.join(opt.coordx_model_path, "checkpoint")
@@ -637,8 +638,15 @@ def run(opt):
             optimizer.zero_grad()
             denoised = model(coords)  
             
+            # 3) Loss = MSE(denoised, GT)
+            # 크기 불일치 확인 및 처리
+            if denoised.shape != image.shape:
+                # 출력 크기에 맞게 GT 이미지 크기 조정
+                image = F.interpolate(image, size=(denoised.shape[2], denoised.shape[3]), mode='bilinear', align_corners=False)
+                
             loss = criterion(denoised, image)
             
+            # 4) Backprop (ResNet만 학습)
             loss.backward()
             optimizer.step()
 
@@ -722,6 +730,11 @@ def run(opt):
 
                     denoised = denoised.squeeze(0) 
                     #breakpoint()
+                    # PSNR 계산 전 크기 확인
+                    if denoised.shape != image.shape:
+                        # 크기가 다르면 맞춤
+                        image = F.interpolate(image.unsqueeze(0), size=(denoised.shape[1], denoised.shape[2]), mode='bilinear', align_corners=False).squeeze(0)
+                    
                     psnr =  peak_signal_noise_ratio(image.cpu().numpy(), denoised.detach().cpu().numpy(), data_range=1)
         #                   ssim = structural_similarity(gt_color.reshape((img_h,img_w,3)), pred_color.reshape((img_h,img_w,3)), data_range=pred_color.max() - pred_color.min(),multichannel=True)
         #                   lsp  = self.lpips(pred_img.cpu(),gt_img)

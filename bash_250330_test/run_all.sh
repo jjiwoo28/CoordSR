@@ -1,0 +1,12 @@
+bash_250330_test/0_run_Teacher.sh
+wait
+bash_250330_test/1_run_CoordX.sh
+wait
+bash_250330_test/2_run_CoordSR_use_combine.sh
+wait
+bash_250330_test/3_run_R2L_body.sh
+wait
+bash_250330_test/4_run_R2L_split_use_combine.sh
+wait
+bash_250330_test/5_run_R2L.sh
+wait

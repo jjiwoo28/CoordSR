@@ -1,8 +1,8 @@
-stanford_path="/data/NeuLF_rgb/stanford_half" #ë°ì´í„°ì…‹ ê²½ë¡œ
+stanford_path="/data/NeuLF_rgb/stanford_half" #?°?´?„°?…‹ ê²½ë¡œ
 
 
-test_day="250303_CoordSR_use_combine" #ì‹¤í—˜ê²°ê³¼ íŒŒì¼ (jsoníŒŒì¼ ) ì¤‘ê°„ ì´ë¦„ì„ ê²°ì •í•©ë‹ˆë‹¤.
-result_path="/data/result/${test_day}" #ì‹¤í—˜ ê²°ê³¼ íŒŒì¼ ì €ì¥ ê²½ë¡œ , ê¸°ë³¸ì ìœ¼ë¡œëŠ” ìµœìƒìœ„ data í´ë”ì˜ í•˜ìœ„ í´ë”ë¡œ ì§€ì •ë˜ì–´ìˆìŠµë‹ˆë‹¤.
+test_day="250303_CoordSR_use_combine" #?‹¤?—˜ê²°ê³¼ ?ŒŒ?¼ (json?ŒŒ?¼ ) ì¤‘ê°„ ?´ë¦„ì„ ê²°ì •?•©?‹ˆ?‹¤.
+result_path="/data/result/${test_day}" #?‹¤?—˜ ê²°ê³¼ ?ŒŒ?¼ ????¥ ê²½ë¡œ , ê¸°ë³¸? ?œ¼ë¡œëŠ” ìµœìƒ?œ„ data ?´?”?˜ ?•˜?œ„ ?´?”ë¡? ì§?? •?˜?–´?ˆ?Šµ?‹ˆ?‹¤.
 
 teacher_header="/data/result/250227_teacher_/250227_teacher__relu_d8_w256_cd2_cd256_R2_8192_decom_dim_us_lr0.0005_"
 teacher_footer="_skip_connection_1"

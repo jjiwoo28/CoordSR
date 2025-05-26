@@ -746,3 +746,78 @@ class SuperResolution_x8_PixelShuffle(nn.Module):
         
         return torch.sigmoid(out)
 
+
+
+def _nerv_activation(act_name='relu'):
+    if act_name == 'relu':
+        return nn.ReLU(inplace=True)
+    elif act_name == 'gelu':
+        return nn.GELU()
+    elif act_name == 'silu':
+        return nn.SiLU(inplace=True)
+    else:
+        raise ValueError(f'Unknown activation {act_name}')
+
+class NeRVUpsampleBlock(nn.Module):
+    """Conv(k×k) → PixelShuffle(r=2) → Act"""
+    def __init__(self, in_ch, out_ch, kernel_size=3, activation='relu'):
+        super().__init__()
+        pad = kernel_size // 2
+        self.block = nn.Sequential(
+            nn.Conv2d(in_ch, out_ch * 4, kernel_size, padding=pad),
+            nn.PixelShuffle(2),
+            _nerv_activation(activation)
+        )
+    def forward(self, x):
+        return self.block(x)
+
+class SuperResolution_x8_NeRV(nn.Module):
+    """
+    Lightweight ×8 up‑scaler (NeRV Decoder 스타일)
+    channel_schedule 5‑tuple: [in, mid1, mid2, mid3, out]
+    예) (256,128,64,32,3)  or  (512,256,128,64,3)
+    """
+    def __init__(self,
+                 channel_schedule=(256,128,64,32,3),
+                 kernel_size=3,
+                 activation='relu'):
+        super().__init__()
+        if len(channel_schedule) != 5:
+            raise ValueError('channel_schedule must have 5 elements (in,a,b,c,out)')
+        c0,c1,c2,c3,c_out = channel_schedule
+
+        self.up1 = NeRVUpsampleBlock(c0, c1, kernel_size, activation)  # ×2
+        self.up2 = NeRVUpsampleBlock(c1, c2, kernel_size, activation)  # ×4
+        self.up3 = NeRVUpsampleBlock(c2, c3, kernel_size, activation)  # ×8
+        self.to_rgb = nn.Conv2d(c3, c_out, 3, padding=1)
+
+    def forward(self, x):
+        x = self.up1(x)
+        x = self.up2(x)
+        x = self.up3(x)
+        x = torch.sigmoid(self.to_rgb(x))
+        return x
+
+# ── 두 가지 편의 클래스 ───────────────────────────────────────
+class SuperResolution_x8_NeRV_256(SuperResolution_x8_NeRV):
+    """채널 스케줄 256→128→64→32→3"""
+    def __init__(self, kernel_size=3, activation='relu'):
+        super().__init__((256,128,64,32,3), kernel_size, activation)
+        
+class SuperResolution_x8_NeRV_256_conv5(SuperResolution_x8_NeRV):
+    """채널 스케줄 256→128→64→32→3"""
+    def __init__(self, kernel_size=5, activation='relu'):
+        super().__init__((256,128,64,32,3), kernel_size, activation)        
+        
+class SuperResolution_x8_NeRV_256_96(SuperResolution_x8_NeRV):
+    """채널 스케줄 256 → 96 → 48 → 24 → 3 """
+    def __init__(self, kernel_size=3, activation='relu'):
+        super().__init__((256,96,48,24,3), kernel_size, activation)
+
+class SuperResolution_x8_NeRV_512(SuperResolution_x8_NeRV):
+    """채널 스케줄 512→256→128→64→3"""
+    def __init__(self, kernel_size=3, activation='relu'):
+        super().__init__((512,256,128,64,3), kernel_size, activation)
+        
+        
+        

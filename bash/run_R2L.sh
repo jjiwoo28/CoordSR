@@ -1,7 +1,7 @@
 stanford_path="/data/NeuLF_rgb/stanford_half" #데이터셋 경로
 
 
-test_day="250303_SR_R2L" #실험결과 파일 (json파일 ) 중간 이름을 결정합니다.
+test_day="250314_R2L_pixel_all" #실험결과 파일 (json파일 ) 중간 이름을 결정합니다.
 result_path="/data/result/${test_day}" #실험 결과 파일 저장 경로 , 기본적으로는 최상위 data 폴더의 하위 폴더로 지정되어있습니다.
 
 teacher_header="/data/result/250227_teacher_/250227_teacher__relu_d8_w256_cd2_cd256_R2_8192_decom_dim_us_lr0.0005_"
@@ -17,11 +17,11 @@ coord_depths=("8")
 coord_widths=("256")
 epoch="1500"
 
-#datasets=( "knights" )
+datasets=( "knights" )
 #datasets=( "bracelet" )
-datasets=( "bracelet" "bunny" "knights"  "gem")
+datasets=(  "bunny" "gem")
 #batch_sizes=("8192" "4096")
-batch_sizes=("8")
+batch_sizes=("2")
 Rs=("1")
 
 decom_dims=("us")
@@ -40,7 +40,8 @@ res_widths=("16")
 after_network_types=("rgb" "feature")
 after_network_types=("feature")
 
-cnn_types=("sr" "sr_pixel_shuffle")
+cnn_types=("sr"  "sr_pixel_shuffle" )
+
 
 for R in "${Rs[@]}"; do
     for depth in "${depths[@]}"; do
@@ -64,13 +65,13 @@ for R in "${Rs[@]}"; do
                                                                 --data_dir "${stanford_path}/${dataset}" \
                                                                 --pseudo_data_path "${teacher_header}${dataset}${teacher_footer}/pseudo_data" \
                                                                 --coordx_model_path "${coordx_header}${dataset}_scale_${scale}" \
-                                                                --exp_dir "${result_path}/${test_day}_${nonlin}_d${depth}_w${width}_cd${coord_depth}_cd${coord_width}_R${R}_${batch_size}_decom_dim_${decom_dim}_lr${lr}_${dataset}_cnn_depth_${res_depth}_cnn_width_${res_width}_after_network_type_${after_network_type}_cnn_type_sr_pixel_shuffle_scale_${scale}" \
+                                                                --exp_dir "${result_path}/${test_day}_${nonlin}_d${depth}_w${width}_cd${coord_depth}_cd${coord_width}_R${R}_${batch_size}_decom_dim_${decom_dim}_lr${lr}_${dataset}_cnn_depth_${res_depth}_cnn_width_${res_width}_after_network_type_${after_network_type}_cnn_type_${cnn_type}_scale_${scale}" \
                                                                 --depth $depth \
                                                                 --width $coord_width \
                                                                 --coord_depth $coord_depth \
                                                                 --coord_width $coord_width \
                                                                 --whole_epoch $epoch \
-                                                                --test_freq 10 \
+                                                                --test_freq 1 \
                                                                 --nonlin $nonlin \
                                                                 --lr $lr \
                                                                 --benchmark \

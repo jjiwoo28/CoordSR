@@ -24,11 +24,11 @@ class MLPWithSkips(nn.Module):
     """
     def __init__(
         self,
-        hidden_features,
-        out_features,
-        hidden_layers,
-        nonlin,           # 예: relu.ReLULayer
-        skips=[4, 8],     # 예시로 4의 배수마다 스킵
+        hidden_features = 256,
+        out_features = 3,
+        hidden_layers = 8,
+        nonlin = relu.ReLULayer,           # 예: relu.ReLULayer
+        skips=[4, 8 ,12, 16],     # 예시로 4의 배수마다 스킵
         R=1
     ):
         super().__init__()
@@ -75,6 +75,84 @@ class MLPWithSkips(nn.Module):
         """
         input_h = x
         h = x
+        # hidden_layers 만큼 반복
+        for i, layer in enumerate(self.layers):
+            if i in self.skips:
+                # skip 연결
+                h = torch.cat([h, input_h], dim=-1)
+            h = layer(h)
+
+        # 마지막 Linear
+        h = self.final_linear(h)
+        return h
+
+
+class MLPWithSkips_4D(nn.Module):
+    """
+    4차원 입력을 받아 처리하는 MLPWithSkips 확장 클래스
+    첫 번째 레이어에서 4차원 입력을 hidden_features 차원으로 확장
+    """
+    def __init__(
+        self,
+        in_features = 4,  # 입력 차원 (기본값 4)
+        hidden_features = 256,
+        out_features = 3,
+        hidden_layers = 8,
+        nonlin = relu.ReLULayer,
+        skips=[4, 8, 12, 16],
+        R=1
+    ):
+        super().__init__()
+        self.in_features = in_features
+        self.hidden_features = hidden_features
+        self.out_features = out_features
+        self.hidden_layers = hidden_layers
+        self.nonlin = nonlin
+        self.skips = skips
+
+        # 첫 번째 레이어: 입력 차원을 hidden_features로 확장
+        self.input_layer = nn.Linear(in_features, hidden_features)
+        
+        # 히든 레이어 구성
+        layers = nn.ModuleList()
+        for i in range(self.hidden_layers):
+            if i == 0:
+                # 첫 번째 히든 레이어
+                layers.append(
+                    self.nonlin(self.hidden_features, self.hidden_features)
+                )
+            else:
+                # 스킵 레이어면 in_dim = hidden_features + hidden_features
+                if i in self.skips:
+                    in_dim = self.hidden_features + self.hidden_features
+                    out_dim = (
+                        self.hidden_features * R
+                        if i == (self.hidden_layers - 1)
+                        else self.hidden_features
+                    )
+                    layers.append(self.nonlin(in_dim, out_dim))
+                else:
+                    in_dim = self.hidden_features
+                    out_dim = (
+                        self.hidden_features * R
+                        if i == (self.hidden_layers - 1)
+                        else self.hidden_features
+                    )
+                    layers.append(self.nonlin(in_dim, out_dim))
+
+        # 마지막에 Linear로 out_features를 예측
+        self.final_linear = nn.Linear(self.hidden_features, self.out_features)
+
+        self.layers = layers
+
+    def forward(self, x):
+        """
+        x.shape: (..., in_features)
+        """
+        # 입력 차원을 hidden_features로 확장
+        input_h = self.input_layer(x)
+        
+        h = input_h
         # hidden_layers 만큼 반복
         for i, layer in enumerate(self.layers):
             if i in self.skips:

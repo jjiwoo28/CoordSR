@@ -187,6 +187,7 @@ def parse_argument():
     
     parser.add_argument('--cnn_type', type=str, default='dncnn', choices=['resnet', 'dncnn' ,'sr' ,'sr_pixel_shuffle'], help='CNN 모델 타입 선택 (resnet 또는 dncnn)')
     parser.add_argument('--after_network_type', type=str, default='rgb', choices=['rgb', 'feature'], help='CNN 입력 채널 수')
+    parser.add_argument('--after_network', type=str, default='COORDX', choices=['COORDX', 'R2L_body' , 'MLP'], help='SR 전 네트워크')
     parser.add_argument('--sr_scale',type=int , default=8)
     parser.add_argument('--data_set', type=str, default='knights', help='데이터셋 선택')
     opt = parser.parse_args()
@@ -245,8 +246,7 @@ def run(opt):
     logger.set_metadata("pseudo_data_path", opt.pseudo_data_path)
     logger.set_metadata("coordx_model_path", opt.coordx_model_path)
     logger.set_metadata("cnn_type", opt.cnn_type)
-    
-    
+    logger.set_metadata("after_network", opt.after_network)
     
     
     logger.load_results()

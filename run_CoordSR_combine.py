@@ -25,7 +25,7 @@ import torch.nn
 import torchvision
 from torch.optim.lr_scheduler import LambdaLR
 
-
+import torch.nn.functional as F  # 이 줄을 추가하세요
 from modules.models_CoordX import COORDX
 
 
@@ -41,11 +41,22 @@ from modules.models_Denoiser import SuperResolution_x2_PixelShuffle
 from modules.models_Denoiser import SuperResolution_x4_PixelShuffle
 from modules.models_Denoiser import SuperResolution_x8_PixelShuffle
 
+from modules.models_Denoiser import SuperResolution_x8_NeRV_256
+from modules.models_Denoiser import SuperResolution_x8_NeRV_512
+from modules.models_Denoiser import SuperResolution_x8_NeRV_256_96
+from modules.models_Denoiser import SuperResolution_x8_NeRV_256_conv5
 from my_utils.logger import PSNRLogger
 
-from my_utils.decomposer import get_mgrid
+from  my_utils.decomposer import get_mgrid
 
 
+from my_utils.decomposer import (
+    generate_fixed_coords, 
+    get_limited_files, 
+    combine_coordinates,
+    PseudoImageDataset, 
+    PseudoImageDataset4D
+)
 
 
 
@@ -54,93 +65,6 @@ from torch.utils.data import Dataset, DataLoader
 from modules.models_Combined import CoordSRCombined
 
 
-
-def generate_fixed_coords(x_fixed, y_fixed, img_w, img_h, scale, device='cpu'):
-
-    
-    coord_1 = torch.tensor([[[[x_fixed, y] for y in torch.linspace(-1, 1, img_h//scale)]]], device=device).permute(0, 2, 1, 3)
-
-    # coord_2 생성: y_fixed를 고정하고 x 값을 -1부터 1까지 img_w 갯수만큼 생성
-    coord_2 = torch.tensor([[[[ y_fixed,x] for x in torch.linspace(-1, 1, img_w//scale)]]], device=device)
-    return coord_1, coord_2
-
-def get_limited_files(folder_path, limit=None):
-    """
-    폴더 내의 PNG 파일들을 가져오되, limit이 설정된 경우 해당 개수만큼만 반환합니다.
-    
-    Args:
-        folder_path (str): PNG 파일들이 있는 폴더 경로
-        limit (int, optional): 최대 파일 개수 제한. None인 경우 모든 파일 반환
-    
-    Returns:
-        list: 정렬된 PNG 파일 목록
-    """
-    # PNG 파일만 필터링
-    files = [f for f in os.listdir(folder_path) if f.endswith('.png')]
-    files.sort()  # 파일명 기준 정렬
-    
-    # limit이 설정된 경우 해당 개수만큼만 반환
-    if limit is not None:
-        files = files[:limit]
-        
-    return files
-
-
-class PseudoImageDataset(Dataset):
-    """
-    특정 폴더 내 PNG 파일 이름에서 (idx, x, y)를 추출하고,
-    해당 이미지를 로드하여 (이미지 텐서, (x,y) 텐서) 형태로 반환합니다.
-    """
-    def __init__(self, folder_path, limit=None, scale=None):
-        super().__init__()
-        self.folder_path = folder_path
-        # get_limited_files 함수를 사용하여 파일 목록 가져오기
-        self.image_files = get_limited_files(folder_path, limit)
-        
-        self.scale = scale
-
-        # 첫 번째 이미지를 로드하여 높이와 너비를 저장
-        if self.image_files:
-            first_image_path = os.path.join(self.folder_path, self.image_files[0])
-            with Image.open(first_image_path) as img:
-                self.w, self.h = img.size  # 수정: width, height 순서로 올바르게 할당
-        else:
-            self.h, self.w = 0, 0  # 이미지가 없을 경우 기본값 설정
-
-    def __len__(self):
-        return len(self.image_files)
-    
-    def __getitem__(self, idx):
-        file_name = self.image_files[idx]
-        file_path = os.path.join(self.folder_path, file_name)
-
-        # 1) 파일 이름 파싱: output_idx_<index>_<x>_<y>.png
-        #    예: output_idx_0_0.1647700071334839_0.7063174247741699.png
-        name_no_ext = file_name.replace('.png', '')
-        splitted = name_no_ext.split('_')
-        # splitted[0] = 'output'
-        # splitted[1] = 'idx'
-        # splitted[2] = index
-        # splitted[3] = x
-        # splitted[4] = y
-        img_idx = int(splitted[2])
-        x_coord = float(splitted[3])
-        y_coord = float(splitted[4])
-
-        # 2) 이미지 불러오기
-        with Image.open(file_path) as img:
-            img_array = np.array(img, dtype=np.float32) / 255.0
-        # (H, W, C) -> (C, H, W)
-        image_tensor = torch.from_numpy(img_array).permute(2, 0, 1)
-        
-        coord_1, coord_2 = generate_fixed_coords(x_coord, y_coord, self.w, self.h, scale=self.scale, device='cpu')
-        # 3) 좌표 텐서 생성 
-        #coords_tensor = torch.tensor([x_coord, y_coord], dtype=torch.float32)
-
-        # (이미지, (x, y)) 튜플로 반환
-        return [coord_1, coord_2], image_tensor  
-
-#base by nlf_decom_2decom.py
 
 def parse_argument():
     
@@ -187,8 +111,9 @@ def parse_argument():
     parser.add_argument('--pseudo_data_path', type=str, default='/data/result/250104_us_only_decom_test_all/250104_us_only_decom_test_all_relu_d8_w256_cd2_cd256_R1_8192_decom_dim_us_lr0.0005_knights/pseudo_data', help='의사 데이터셋 경로')
     parser.add_argument('--coordx_model_path', type=str, default="/data/result/250116_us_only_decom_down_scale/250116_us_only_decom_down_scale_relu_d0_w128_cd8_cd256_R1_8192_decom_dim_us_lr0.0005_knights", help='입력 coordx 모델 체크포인트 경로')
     
-    parser.add_argument('--cnn_type', type=str, default='dncnn', choices=['resnet', 'dncnn' ,'sr' ,'sr_pixel_shuffle'], help='CNN 모델 타입 선택 (resnet 또는 dncnn)')
+    parser.add_argument('--cnn_type', type=str, default='dncnn', choices=['resnet', 'dncnn' ,'sr' ,'sr_pixel_shuffle' , 'nerv_sr256' , 'nerv_sr512' , 'nerv_sr256_96' , 'nerv_sr256_conv5'], help='CNN 모델 타입 선택 (resnet 또는 dncnn)')
     parser.add_argument('--after_network_type', type=str, default='rgb', choices=['rgb', 'feature'], help='CNN 입력 채널 수')
+    parser.add_argument('--after_network', type=str, default='COORDX', choices=['COORDX', 'R2L_body' , 'MLP'], help='SR 전 네트워크')
     parser.add_argument('--sr_scale',type=int , default=8)
     parser.add_argument('--data_set', type=str, default='knights', help='데이터셋 선택')
     opt = parser.parse_args()
@@ -247,8 +172,7 @@ def run(opt):
     logger.set_metadata("pseudo_data_path", opt.pseudo_data_path)
     logger.set_metadata("coordx_model_path", opt.coordx_model_path)
     logger.set_metadata("cnn_type", opt.cnn_type)
-    
-    
+    logger.set_metadata("after_network", opt.after_network)
     
     
     logger.load_results()
@@ -664,8 +588,23 @@ def run(opt):
                 output_channels=3,
                 base_channels=opt.res_width,
                 activation='relu'
-            ).cuda()                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
-    
+            ).cuda()
+    elif opt.cnn_type == 'nerv_sr256':
+        denoiser = SuperResolution_x8_NeRV_256(
+            activation='gelu'
+        ).cuda()
+    elif opt.cnn_type == 'nerv_sr512':
+        denoiser = SuperResolution_x8_NeRV_512(
+            activation='gelu'
+        ).cuda()
+    elif opt.cnn_type == 'nerv_sr256_96':
+        denoiser = SuperResolution_x8_NeRV_256_96(
+            activation='gelu'
+        ).cuda()
+    elif opt.cnn_type == 'nerv_sr256_conv5':
+        denoiser = SuperResolution_x8_NeRV_256_conv5(
+            activation='gelu'
+        ).cuda()
     print(denoiser)
         #     input_channels=3,
         # output_channels=3,
@@ -694,7 +633,14 @@ def run(opt):
 
     folder_path = opt.pseudo_data_path
     batch_size = opt.batch_size
-    pseudo_dataset = PseudoImageDataset(folder_path=folder_path , limit=1000, scale=scale)
+    
+    if opt.after_network == 'COORDX':
+        pseudo_dataset = PseudoImageDataset(folder_path=folder_path , limit=1000, scale=scale)
+        
+    elif opt.after_network == 'R2L_body' or opt.after_network == 'MLP':
+        pseudo_dataset = PseudoImageDataset4D(folder_path=folder_path , limit=1000, scale=scale)
+    else:
+        assert False, "Invalid after_network"
     pseudo_loader = DataLoader(
         pseudo_dataset,
         batch_size=batch_size,
@@ -714,11 +660,17 @@ def run(opt):
         for idx, (coords, image) in enumerate(tqdm(pseudo_loader, desc=f"Epoch {epoch+1}/{num_epochs}", leave=False)):
             coords = [c.cuda() for c in coords]  # coords[0], coords[1] 모두 cuda
             image = image.cuda()                # Ground Truth (원본)
-            
+            #breakpoint()
             # 올바른 코드
             denoised = combined_model(coords , batch_size)  # 결합 모델을 통해 전체 파이프라인 실행
             
             # 3) Loss = MSE(denoised, GT)
+            #breakpoint()
+            
+            if denoised.shape != image.shape:
+                # 출력 크기에 맞게 GT 이미지 크기 조정
+                image = F.interpolate(image, size=(denoised.shape[2], denoised.shape[3]), mode='bilinear', align_corners=False)
+                
             loss = criterion(denoised, image)
             
             # 4) Backprop (ResNet만 학습)
@@ -776,7 +728,7 @@ def run(opt):
                     torch.cuda.synchronize()
                     start.record()
                     #breakpoint()
-                    denoised = combined_model(coords , 1 , measure_time=False)
+                    denoised = combined_model(coords , 1 )
                     end.record()
                     torch.cuda.synchronize()
                     
@@ -786,6 +738,14 @@ def run(opt):
                     image = image.reshape((img_h,img_w,3)).permute((2,0,1))
                     #if epoch % test_img_save_freq == 0:
                     #breakpoint()
+                    if denoised.shape[2:] != image.shape[1:]:
+                        # 두 가지 옵션:
+                        # 1. denoised를 image 크기에 맞게 조정
+                        # denoised = F.interpolate(denoised, size=image.shape[1:], mode='bilinear', align_corners=False)
+                        
+                        # 2. image를 denoised 크기에 맞게 조정 (선택)
+                        image = F.interpolate(image.unsqueeze(0), size=denoised.shape[2:], mode='bilinear', align_corners=False).squeeze(0)
+                    
 
                     idx_to_save = 0
                     val_test_path = f"{test_path}/ep{epoch}"

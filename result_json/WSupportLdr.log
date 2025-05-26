@@ -1,0 +1,8 @@
+07.08.2023 12:50:37.472 [00002288] --- WSupportLdr ---
+07.08.2023 12:50:37.472 [00002288] --- LL ---
+07.08.2023 12:50:37.472 [00002288] --- LL:Loading C:\Program Files (x86)\ImmersiveMapperPRO\WSupport32.sys and C:\Program Files (x86)\ImmersiveMapperPRO\WSupport64.sys
+07.08.2023 12:50:37.515 [00002288] --- LL1:1
+07.08.2023 12:50:37.515 [00002288] --- LL64:Loading C:\Program Files (x86)\ImmersiveMapperPRO\WSupportLdr64.dll
+07.08.2023 12:50:45.005 [00002288] --- LL64:1
+07.08.2023 12:50:45.005 [00002288] --- LL32:Loading C:\Program Files (x86)\ImmersiveMapperPRO\WSupportLdr32.dll
+07.08.2023 12:50:50.544 [00002288] --- LL32:1

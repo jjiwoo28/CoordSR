@@ -1,0 +1,2119 @@
+{
+    "path": "250227_teacher__relu_d8_w256_cd2_cd256_R2_8192_decom_dim_us_lr0.0005_chess_skip_connection_1",
+    "depth": 8,
+    "width": 256,
+    "coord_depth": 2,
+    "coord_width": 256,
+    "dataset_name": "chess",
+    "model_info": "relu",
+    "lr": 0.0005,
+    "batch_size": 8192,
+    "decom_dim": "us",
+    "R": 2,
+    "schdule_type": "linear",
+    "result_time": {
+        "1": {
+            "forward": 2.9850755482414044,
+            "backward": 5.622171061089936,
+            "per_epoch_whole": 94739.8984375,
+            "inference_time": 86.67091539171007
+        },
+        "2": {
+            "forward": 2.885117335998778,
+            "backward": 5.570766870340922,
+            "per_epoch_whole": 93228.8125,
+            "inference_time": 79.3589121500651
+        },
+        "3": {
+            "forward": 2.9087955233320923,
+            "backward": 5.579713709479726,
+            "per_epoch_whole": 93657.296875,
+            "inference_time": 82.29000515407985
+        },
+        "4": {
+            "forward": 4.241656829280828,
+            "backward": 8.074909892438988,
+            "per_epoch_whole": 157542.578125,
+            "inference_time": 130.60493299696182
+        },
+        "5": {
+            "forward": 4.551982298509979,
+            "backward": 8.664980392073744,
+            "per_epoch_whole": 173257.8125,
+            "inference_time": 132.35301547580295
+        },
+        "6": {
+            "forward": 4.536043304536264,
+            "backward": 8.710903924474938,
+            "per_epoch_whole": 174194.59375,
+            "inference_time": 132.04437594943576
+        },
+        "7": {
+            "forward": 3.6734967618453127,
+            "backward": 7.036832421465919,
+            "per_epoch_whole": 130975.71875,
+            "inference_time": 89.03714074028862
+        },
+        "8": {
+            "forward": 2.881455958052485,
+            "backward": 5.5659329447776,
+            "per_epoch_whole": 93093.609375,
+            "inference_time": 82.30205790201822
+        },
+        "9": {
+            "forward": 2.878290172070781,
+            "backward": 5.560050855417258,
+            "per_epoch_whole": 92994.9609375,
+            "inference_time": 83.09894731309679
+        },
+        "10": {
+            "forward": 2.8999934559157268,
+            "backward": 5.608173172037294,
+            "per_epoch_whole": 94040.2890625,
+            "inference_time": 80.85365041097005
+        },
+        "11": {
+            "forward": 2.887812078886219,
+            "backward": 5.620365100579478,
+            "per_epoch_whole": 93927.421875,
+            "inference_time": 79.76415676540799
+        },
+        "12": {
+            "forward": 2.8735956068619135,
+            "backward": 5.5679748358364245,
+            "per_epoch_whole": 93051.578125,
+            "inference_time": 82.09362114800348
+        },
+        "13": {
+            "forward": 2.8869232613028544,
+            "backward": 5.604503867186176,
+            "per_epoch_whole": 93816.3046875,
+            "inference_time": 83.78683047824437
+        },
+        "14": {
+            "forward": 4.142601186680959,
+            "backward": 7.927998967241701,
+            "per_epoch_whole": 153937.984375,
+            "inference_time": 132.32059733072919
+        },
+        "15": {
+            "forward": 4.581025865114926,
+            "backward": 8.708731531457206,
+            "per_epoch_whole": 173842.0625,
+            "inference_time": 132.6038996378581
+        },
+        "16": {
+            "forward": 4.572967369437902,
+            "backward": 8.700086762840733,
+            "per_epoch_whole": 173940.609375,
+            "inference_time": 132.99632093641492
+        },
+        "17": {
+            "forward": 3.490483577584267,
+            "backward": 6.742379907969377,
+            "per_epoch_whole": 122961.2734375,
+            "inference_time": 86.5094706217448
+        },
+        "18": {
+            "forward": 2.905038428762789,
+            "backward": 5.646079859536145,
+            "per_epoch_whole": 94756.6484375,
+            "inference_time": 84.44612036810982
+        },
+        "19": {
+            "forward": 2.8817915011118336,
+            "backward": 5.584891933703027,
+            "per_epoch_whole": 93525.3671875,
+            "inference_time": 87.13136376274957
+        },
+        "20": {
+            "forward": 2.89911015615224,
+            "backward": 5.5983079026510225,
+            "per_epoch_whole": 93865.4609375,
+            "inference_time": 80.51359303792317
+        },
+        "21": {
+            "forward": 2.8952450857262013,
+            "backward": 5.618191023689812,
+            "per_epoch_whole": 93985.375,
+            "inference_time": 83.4088855319553
+        },
+        "22": {
+            "forward": 2.9188393340656744,
+            "backward": 5.635822164755323,
+            "per_epoch_whole": 94485.7265625,
+            "inference_time": 91.16226535373264
+        },
+        "23": {
+            "forward": 3.026623248619452,
+            "backward": 5.816408032382263,
+            "per_epoch_whole": 99482.0234375,
+            "inference_time": 129.84877692328558
+        },
+        "24": {
+            "forward": 4.5656863582077785,
+            "backward": 8.690126250458157,
+            "per_epoch_whole": 174006.890625,
+            "inference_time": 133.22261725531683
+        },
+        "25": {
+            "forward": 4.528799736102693,
+            "backward": 8.697809760261801,
+            "per_epoch_whole": 173923.6875,
+            "inference_time": 131.27550252278644
+        },
+        "26": {
+            "forward": 4.530568962506558,
+            "backward": 8.70566843134611,
+            "per_epoch_whole": 173937.453125,
+            "inference_time": 131.02292717827692
+        },
+        "27": {
+            "forward": 2.9378229995192355,
+            "backward": 5.652150065258995,
+            "per_epoch_whole": 95497.703125,
+            "inference_time": 86.06412845187717
+        },
+        "28": {
+            "forward": 2.9000382520197157,
+            "backward": 5.625561871943342,
+            "per_epoch_whole": 94392.1015625,
+            "inference_time": 79.57743326822916
+        },
+        "29": {
+            "forward": 2.906012482303721,
+            "backward": 5.6173060369043135,
+            "per_epoch_whole": 94379.03125,
+            "inference_time": 82.04982079399956
+        },
+        "30": {
+            "forward": 2.914026138451081,
+            "backward": 5.675018988001316,
+            "per_epoch_whole": 95208.78125,
+            "inference_time": 77.65083058675131
+        },
+        "31": {
+            "forward": 2.919331743828969,
+            "backward": 5.651733644604661,
+            "per_epoch_whole": 94854.984375,
+            "inference_time": 81.88248528374567
+        },
+        "32": {
+            "forward": 2.883615020340816,
+            "backward": 5.594944824631279,
+            "per_epoch_whole": 93970.5703125,
+            "inference_time": 84.06345960828993
+        },
+        "33": {
+            "forward": 3.5724319347886575,
+            "backward": 6.830992337263883,
+            "per_epoch_whole": 125847.9296875,
+            "inference_time": 132.16765679253473
+        },
+        "34": {
+            "forward": 4.595809337990699,
+            "backward": 8.692338389545162,
+            "per_epoch_whole": 173919.875,
+            "inference_time": 132.55835469563803
+        },
+        "35": {
+            "forward": 4.612441799026838,
+            "backward": 8.712782145391389,
+            "per_epoch_whole": 174126.765625,
+            "inference_time": 132.33072747124564
+        },
+        "36": {
+            "forward": 4.061991489270243,
+            "backward": 7.791161563385169,
+            "per_epoch_whole": 150777.109375,
+            "inference_time": 77.72239685058594
+        },
+        "37": {
+            "forward": 2.872108563160723,
+            "backward": 5.555354583090841,
+            "per_epoch_whole": 92998.4609375,
+            "inference_time": 84.25370279947917
+        },
+        "38": {
+            "forward": 2.8871890042998003,
+            "backward": 5.639841057938763,
+            "per_epoch_whole": 94149.3359375,
+            "inference_time": 89.2948455810547
+        },
+        "39": {
+            "forward": 2.890625631204559,
+            "backward": 5.628970920743935,
+            "per_epoch_whole": 94201.8125,
+            "inference_time": 87.75877549913196
+        },
+        "40": {
+            "forward": 2.88864454650271,
+            "backward": 5.597021378376893,
+            "per_epoch_whole": 93732.234375,
+            "inference_time": 85.86807844373915
+        },
+        "41": {
+            "forward": 2.8827495329339037,
+            "backward": 5.589469609261074,
+            "per_epoch_whole": 93523.25,
+            "inference_time": 77.48619249131944
+        },
+        "42": {
+            "forward": 2.8862209759876514,
+            "backward": 5.588568557137929,
+            "per_epoch_whole": 93542.1640625,
+            "inference_time": 83.92886861165366
+        },
+        "43": {
+            "forward": 4.029188004765786,
+            "backward": 7.7166923390862205,
+            "per_epoch_whole": 148505.421875,
+            "inference_time": 131.48543802897134
+        },
+        "44": {
+            "forward": 4.539367176398487,
+            "backward": 8.695617479436578,
+            "per_epoch_whole": 173953.03125,
+            "inference_time": 130.87186347113717
+        },
+        "45": {
+            "forward": 4.5650609369230635,
+            "backward": 8.723515561926414,
+            "per_epoch_whole": 174315.1875,
+            "inference_time": 132.4045647515191
+        },
+        "46": {
+            "forward": 3.6005099105535,
+            "backward": 6.93145095033541,
+            "per_epoch_whole": 128081.71875,
+            "inference_time": 82.77261606852214
+        },
+        "47": {
+            "forward": 2.900342610124465,
+            "backward": 5.60540550935729,
+            "per_epoch_whole": 93933.1328125,
+            "inference_time": 80.41687774658203
+        },
+        "48": {
+            "forward": 2.889199167535256,
+            "backward": 5.610873330203105,
+            "per_epoch_whole": 93912.5390625,
+            "inference_time": 83.88951110839844
+        },
+        "49": {
+            "forward": 2.868080504017583,
+            "backward": 5.5753934632504825,
+            "per_epoch_whole": 93056.8984375,
+            "inference_time": 83.42787509494357
+        },
+        "50": {
+            "forward": 2.898152460776273,
+            "backward": 5.650318326647889,
+            "per_epoch_whole": 94365.265625,
+            "inference_time": 85.90894317626953
+        },
+        "51": {
+            "forward": 2.90489043359803,
+            "backward": 5.620924418279408,
+            "per_epoch_whole": 94165.625,
+            "inference_time": 86.89674970838757
+        },
+        "52": {
+            "forward": 2.9068397087788704,
+            "backward": 5.6070050999403565,
+            "per_epoch_whole": 94129.5234375,
+            "inference_time": 88.36949327256944
+        },
+        "53": {
+            "forward": 4.578970653368445,
+            "backward": 8.660042403209454,
+            "per_epoch_whole": 173238.703125,
+            "inference_time": 128.91748894585504
+        },
+        "54": {
+            "forward": 4.594068154313963,
+            "backward": 8.728072614385987,
+            "per_epoch_whole": 174355.03125,
+            "inference_time": 131.90064154730902
+        },
+        "55": {
+            "forward": 4.567882036889997,
+            "backward": 8.702916071653236,
+            "per_epoch_whole": 174103.390625,
+            "inference_time": 131.53612094455295
+        },
+        "56": {
+            "forward": 3.0821826476081298,
+            "backward": 5.920520718068515,
+            "per_epoch_whole": 102271.078125,
+            "inference_time": 91.55723656548395
+        },
+        "57": {
+            "forward": 2.8915440716506513,
+            "backward": 5.600111105645568,
+            "per_epoch_whole": 93691.015625,
+            "inference_time": 89.44310082329646
+        },
+        "58": {
+            "forward": 2.897142802002175,
+            "backward": 5.617659865138255,
+            "per_epoch_whole": 94005.2890625,
+            "inference_time": 76.73613823784721
+        },
+        "59": {
+            "forward": 2.8979243300662803,
+            "backward": 5.628783257755696,
+            "per_epoch_whole": 94221.0,
+            "inference_time": 89.33001200358073
+        },
+        "60": {
+            "forward": 2.9160147349313115,
+            "backward": 5.647712488484416,
+            "per_epoch_whole": 94523.09375,
+            "inference_time": 78.21539645724826
+        },
+        "61": {
+            "forward": 2.894231774431139,
+            "backward": 5.602806808833403,
+            "per_epoch_whole": 93965.1640625,
+            "inference_time": 82.42435879177518
+        },
+        "62": {
+            "forward": 3.0939876876331676,
+            "backward": 5.942403298900701,
+            "per_epoch_whole": 103059.8984375,
+            "inference_time": 132.32469855414496
+        },
+        "63": {
+            "forward": 4.521512904376695,
+            "backward": 8.696868227840616,
+            "per_epoch_whole": 173961.140625,
+            "inference_time": 130.41941494411893
+        },
+        "64": {
+            "forward": 4.588087090454294,
+            "backward": 8.71849772881152,
+            "per_epoch_whole": 174403.578125,
+            "inference_time": 131.63438669840494
+        },
+        "65": {
+            "forward": 4.528604525019318,
+            "backward": 8.622921373217299,
+            "per_epoch_whole": 171891.5625,
+            "inference_time": 87.79012552897134
+        },
+        "66": {
+            "forward": 2.905744543548186,
+            "backward": 5.653589193813985,
+            "per_epoch_whole": 94908.03125,
+            "inference_time": 86.39402686225043
+        },
+        "67": {
+            "forward": 2.9107205020979556,
+            "backward": 5.662799241246656,
+            "per_epoch_whole": 94949.734375,
+            "inference_time": 84.64076826307507
+        },
+        "68": {
+            "forward": 2.9278469527915396,
+            "backward": 5.662772673687742,
+            "per_epoch_whole": 95237.7421875,
+            "inference_time": 85.38474273681642
+        },
+        "69": {
+            "forward": 2.893302439243249,
+            "backward": 5.649965995789782,
+            "per_epoch_whole": 94636.9140625,
+            "inference_time": 91.90983835856119
+        },
+        "70": {
+            "forward": 2.9117629214965866,
+            "backward": 5.630358336654252,
+            "per_epoch_whole": 94752.6328125,
+            "inference_time": 84.07869805230034
+        },
+        "71": {
+            "forward": 2.905920948228619,
+            "backward": 5.621976484831924,
+            "per_epoch_whole": 94640.375,
+            "inference_time": 82.20570712619357
+        },
+        "72": {
+            "forward": 3.9800467357058777,
+            "backward": 7.615895080146408,
+            "per_epoch_whole": 146231.71875,
+            "inference_time": 132.7173139784071
+        },
+        "73": {
+            "forward": 4.530584164871272,
+            "backward": 8.687561328321614,
+            "per_epoch_whole": 173819.078125,
+            "inference_time": 131.55398729112414
+        },
+        "74": {
+            "forward": 4.578619204323541,
+            "backward": 8.721002151696498,
+            "per_epoch_whole": 174399.484375,
+            "inference_time": 132.31988864474826
+        },
+        "75": {
+            "forward": 3.6520469056771674,
+            "backward": 7.01101325955169,
+            "per_epoch_whole": 130228.890625,
+            "inference_time": 81.76131354437933
+        },
+        "76": {
+            "forward": 2.9182326297498307,
+            "backward": 5.631964461021588,
+            "per_epoch_whole": 94393.921875,
+            "inference_time": 87.43865119086371
+        },
+        "77": {
+            "forward": 2.888125385363783,
+            "backward": 5.609593679949154,
+            "per_epoch_whole": 93978.28125,
+            "inference_time": 81.54641808403863
+        },
+        "78": {
+            "forward": 2.9049839495502217,
+            "backward": 5.581091644431595,
+            "per_epoch_whole": 93673.4453125,
+            "inference_time": 85.41911739773221
+        },
+        "79": {
+            "forward": 2.8720976199724264,
+            "backward": 5.636880878833934,
+            "per_epoch_whole": 93848.90625,
+            "inference_time": 80.33938598632812
+        },
+        "80": {
+            "forward": 2.867505317373037,
+            "backward": 5.6246679263932835,
+            "per_epoch_whole": 93790.3203125,
+            "inference_time": 78.21040089925131
+        },
+        "81": {
+            "forward": 2.891084022592937,
+            "backward": 5.623872170892968,
+            "per_epoch_whole": 94390.5546875,
+            "inference_time": 103.08209652370877
+        },
+        "82": {
+            "forward": 4.548965129785222,
+            "backward": 8.628783927678848,
+            "per_epoch_whole": 172502.78125,
+            "inference_time": 131.87070041232639
+        },
+        "83": {
+            "forward": 4.5509327988374935,
+            "backward": 8.703760857740022,
+            "per_epoch_whole": 174124.421875,
+            "inference_time": 132.37066819932724
+        },
+        "84": {
+            "forward": 4.61214163613077,
+            "backward": 8.727911611794356,
+            "per_epoch_whole": 174365.140625,
+            "inference_time": 131.14033169216577
+        },
+        "85": {
+            "forward": 3.0779190521388893,
+            "backward": 5.945656734306106,
+            "per_epoch_whole": 102671.2734375,
+            "inference_time": 86.60351223415799
+        },
+        "86": {
+            "forward": 2.894506543008761,
+            "backward": 5.632946846491697,
+            "per_epoch_whole": 94370.078125,
+            "inference_time": 80.73056793212892
+        },
+        "87": {
+            "forward": 2.8960374344864004,
+            "backward": 5.633202061740529,
+            "per_epoch_whole": 94590.09375,
+            "inference_time": 85.63631608751085
+        },
+        "88": {
+            "forward": 2.895238573811637,
+            "backward": 5.648672213061512,
+            "per_epoch_whole": 94661.765625,
+            "inference_time": 83.21595340304906
+        },
+        "89": {
+            "forward": 2.898632977611557,
+            "backward": 5.653715857105817,
+            "per_epoch_whole": 94765.34375,
+            "inference_time": 82.8711395263672
+        },
+        "90": {
+            "forward": 2.895063231007539,
+            "backward": 5.619212158105055,
+            "per_epoch_whole": 94118.0390625,
+            "inference_time": 89.1503219604492
+        },
+        "91": {
+            "forward": 3.4859463354347873,
+            "backward": 6.6814307413616385,
+            "per_epoch_whole": 121588.9296875,
+            "inference_time": 132.0716315375434
+        },
+        "92": {
+            "forward": 4.5882797655070275,
+            "backward": 8.712222307959713,
+            "per_epoch_whole": 173984.109375,
+            "inference_time": 130.48488193088107
+        },
+        "93": {
+            "forward": 4.609064980763527,
+            "backward": 8.715681080805215,
+            "per_epoch_whole": 174117.546875,
+            "inference_time": 132.62776523166235
+        },
+        "94": {
+            "forward": 4.178538546794367,
+            "backward": 7.965767759922964,
+            "per_epoch_whole": 154837.25,
+            "inference_time": 86.92872958713107
+        },
+        "95": {
+            "forward": 2.909886192029875,
+            "backward": 5.611095875299525,
+            "per_epoch_whole": 94418.578125,
+            "inference_time": 77.406494140625
+        },
+        "96": {
+            "forward": 2.90332394394783,
+            "backward": 5.6277497382471635,
+            "per_epoch_whole": 94626.6875,
+            "inference_time": 89.53001997205946
+        },
+        "97": {
+            "forward": 2.906785341449437,
+            "backward": 5.669324822979635,
+            "per_epoch_whole": 95041.3515625,
+            "inference_time": 81.23402065700954
+        },
+        "98": {
+            "forward": 2.9019984695319234,
+            "backward": 5.641923905891436,
+            "per_epoch_whole": 94732.828125,
+            "inference_time": 82.8860549926758
+        },
+        "99": {
+            "forward": 2.908504385883962,
+            "backward": 5.603677587228202,
+            "per_epoch_whole": 94267.6015625,
+            "inference_time": 86.63631693522134
+        },
+        "100": {
+            "forward": 2.891132649168914,
+            "backward": 5.612799924769614,
+            "per_epoch_whole": 93958.953125,
+            "inference_time": 86.95239427354599
+        },
+        "101": {
+            "forward": 4.158574299688221,
+            "backward": 7.883380454549989,
+            "per_epoch_whole": 153431.71875,
+            "inference_time": 131.46817525227863
+        },
+        "102": {
+            "forward": 4.561928882680454,
+            "backward": 8.695375978964858,
+            "per_epoch_whole": 173734.859375,
+            "inference_time": 133.0430891248915
+        },
+        "103": {
+            "forward": 4.584296227672202,
+            "backward": 8.689557535971618,
+            "per_epoch_whole": 173877.796875,
+            "inference_time": 131.84887525770398
+        },
+        "104": {
+            "forward": 3.6466715775171274,
+            "backward": 7.012372760066892,
+            "per_epoch_whole": 129936.6953125,
+            "inference_time": 90.59201388888889
+        },
+        "105": {
+            "forward": 2.893360103046857,
+            "backward": 5.61937327501784,
+            "per_epoch_whole": 94161.8046875,
+            "inference_time": 86.17842271592882
+        },
+        "106": {
+            "forward": 2.896823547491604,
+            "backward": 5.619399151870171,
+            "per_epoch_whole": 94093.25,
+            "inference_time": 83.68263329399957
+        },
+        "107": {
+            "forward": 2.89144708100776,
+            "backward": 5.626072517034698,
+            "per_epoch_whole": 94059.6875,
+            "inference_time": 81.10286204020181
+        },
+        "108": {
+            "forward": 2.8752361078958404,
+            "backward": 5.600907467028857,
+            "per_epoch_whole": 93555.09375,
+            "inference_time": 84.19862111409505
+        },
+        "109": {
+            "forward": 2.8810617745592344,
+            "backward": 5.605063461081859,
+            "per_epoch_whole": 93785.7421875,
+            "inference_time": 90.35501522488065
+        },
+        "110": {
+            "forward": 2.8925335067745426,
+            "backward": 5.607934257768635,
+            "per_epoch_whole": 93797.9140625,
+            "inference_time": 84.28101009792752
+        },
+        "111": {
+            "forward": 4.405674687990792,
+            "backward": 8.37759092607951,
+            "per_epoch_whole": 165656.421875,
+            "inference_time": 131.3935106065538
+        },
+        "112": {
+            "forward": 4.582037917766498,
+            "backward": 8.721342363470544,
+            "per_epoch_whole": 174247.296875,
+            "inference_time": 131.36815728081598
+        },
+        "113": {
+            "forward": 4.590031610262274,
+            "backward": 8.711510650829482,
+            "per_epoch_whole": 174197.984375,
+            "inference_time": 128.98040262858072
+        },
+        "114": {
+            "forward": 3.2641130280757777,
+            "backward": 6.380923094386943,
+            "per_epoch_whole": 112310.1328125,
+            "inference_time": 87.86975945366753
+        },
+        "115": {
+            "forward": 2.9367214889918234,
+            "backward": 5.721265044327765,
+            "per_epoch_whole": 95858.1875,
+            "inference_time": 77.6515621609158
+        },
+        "116": {
+            "forward": 2.889078734989662,
+            "backward": 5.632219005285258,
+            "per_epoch_whole": 94048.78125,
+            "inference_time": 90.10582139756944
+        },
+        "117": {
+            "forward": 2.896940803243,
+            "backward": 5.636465510122848,
+            "per_epoch_whole": 94248.875,
+            "inference_time": 81.87936062282986
+        },
+        "118": {
+            "forward": 2.889429269187465,
+            "backward": 5.650617221643264,
+            "per_epoch_whole": 94358.4140625,
+            "inference_time": 84.38712904188368
+        },
+        "119": {
+            "forward": 2.911439704981918,
+            "backward": 5.655278625789548,
+            "per_epoch_whole": 94672.515625,
+            "inference_time": 88.80114407009548
+        },
+        "120": {
+            "forward": 3.2253344733669,
+            "backward": 6.232684372793552,
+            "per_epoch_whole": 109408.359375,
+            "inference_time": 132.53245544433594
+        },
+        "121": {
+            "forward": 4.62867062806576,
+            "backward": 8.754245081302297,
+            "per_epoch_whole": 175052.90625,
+            "inference_time": 131.5819091796875
+        },
+        "122": {
+            "forward": 4.6109628441049635,
+            "backward": 8.747269630794273,
+            "per_epoch_whole": 174863.8125,
+            "inference_time": 132.875005086263
+        },
+        "123": {
+            "forward": 4.481292846413566,
+            "backward": 8.490049368820797,
+            "per_epoch_whole": 167598.015625,
+            "inference_time": 84.71515062120226
+        },
+        "124": {
+            "forward": 2.906216955491499,
+            "backward": 5.689908210451817,
+            "per_epoch_whole": 94881.1328125,
+            "inference_time": 90.30336422390408
+        },
+        "125": {
+            "forward": 2.8889963978925333,
+            "backward": 5.630336313700551,
+            "per_epoch_whole": 93978.2109375,
+            "inference_time": 89.47433302137588
+        },
+        "126": {
+            "forward": 2.903106815843685,
+            "backward": 5.642262885647072,
+            "per_epoch_whole": 94336.9609375,
+            "inference_time": 87.58712090386285
+        },
+        "127": {
+            "forward": 2.8923138165577678,
+            "backward": 5.631304355795958,
+            "per_epoch_whole": 94077.5078125,
+            "inference_time": 86.61569044325087
+        },
+        "128": {
+            "forward": 2.9132608236710866,
+            "backward": 5.660513885737924,
+            "per_epoch_whole": 94749.5703125,
+            "inference_time": 90.19664679633246
+        },
+        "129": {
+            "forward": 2.897792941188843,
+            "backward": 5.681410798179754,
+            "per_epoch_whole": 94829.5625,
+            "inference_time": 84.82053799099391
+        },
+        "130": {
+            "forward": 3.8117944631328076,
+            "backward": 7.29579769470342,
+            "per_epoch_whole": 137066.90625,
+            "inference_time": 131.490237765842
+        },
+        "131": {
+            "forward": 4.633249722765928,
+            "backward": 8.749300487516775,
+            "per_epoch_whole": 174873.5625,
+            "inference_time": 131.7034623887804
+        },
+        "132": {
+            "forward": 4.594260388846297,
+            "backward": 8.739953950625337,
+            "per_epoch_whole": 174703.109375,
+            "inference_time": 130.1059044731988
+        },
+        "133": {
+            "forward": 3.8776894727433087,
+            "backward": 7.4064634430199945,
+            "per_epoch_whole": 140251.953125,
+            "inference_time": 86.05548519558377
+        },
+        "134": {
+            "forward": 2.8908337661825865,
+            "backward": 5.5993726625729785,
+            "per_epoch_whole": 93600.8203125,
+            "inference_time": 89.71386633978949
+        },
+        "135": {
+            "forward": 2.8767510064280413,
+            "backward": 5.585431835266909,
+            "per_epoch_whole": 93246.8046875,
+            "inference_time": 86.13891347249348
+        },
+        "136": {
+            "forward": 2.88873135851645,
+            "backward": 5.613349817392262,
+            "per_epoch_whole": 93644.8359375,
+            "inference_time": 84.41191948784723
+        },
+        "137": {
+            "forward": 2.90639539878716,
+            "backward": 5.679016096022058,
+            "per_epoch_whole": 94895.8515625,
+            "inference_time": 83.122802734375
+        },
+        "138": {
+            "forward": 2.910631890177181,
+            "backward": 5.6533875851371995,
+            "per_epoch_whole": 94566.265625,
+            "inference_time": 83.47017584906683
+        },
+        "139": {
+            "forward": 2.8789390252043816,
+            "backward": 5.6292692496852546,
+            "per_epoch_whole": 93839.9140625,
+            "inference_time": 85.39418538411459
+        },
+        "140": {
+            "forward": 4.15792570194273,
+            "backward": 7.895340037150403,
+            "per_epoch_whole": 152962.234375,
+            "inference_time": 132.17529975043402
+        },
+        "141": {
+            "forward": 4.598407392814663,
+            "backward": 8.755496445075826,
+            "per_epoch_whole": 174999.25,
+            "inference_time": 132.34859890407986
+        },
+        "142": {
+            "forward": 4.61397350258077,
+            "backward": 8.746291949390088,
+            "per_epoch_whole": 174959.90625,
+            "inference_time": 132.33331298828125
+        },
+        "143": {
+            "forward": 3.5491706720425884,
+            "backward": 6.7869138978350545,
+            "per_epoch_whole": 124220.390625,
+            "inference_time": 89.08594428168402
+        },
+        "144": {
+            "forward": 2.9031999089933422,
+            "backward": 5.6113326394076495,
+            "per_epoch_whole": 93908.4140625,
+            "inference_time": 89.02246432834202
+        },
+        "145": {
+            "forward": 2.8964973287542692,
+            "backward": 5.666247920950449,
+            "per_epoch_whole": 94487.1015625,
+            "inference_time": 85.21340688069662
+        },
+        "146": {
+            "forward": 2.907026425611982,
+            "backward": 5.686556987486329,
+            "per_epoch_whole": 95059.109375,
+            "inference_time": 80.56308576795789
+        },
+        "147": {
+            "forward": 2.910981303769055,
+            "backward": 5.667556187685814,
+            "per_epoch_whole": 94766.1015625,
+            "inference_time": 83.3660634358724
+        },
+        "148": {
+            "forward": 2.9047532248644425,
+            "backward": 5.6424294765074965,
+            "per_epoch_whole": 94349.6953125,
+            "inference_time": 80.64430830213757
+        },
+        "149": {
+            "forward": 2.9045534342470067,
+            "backward": 5.62978278227974,
+            "per_epoch_whole": 94223.984375,
+            "inference_time": 105.85133446587456
+        },
+        "150": {
+            "forward": 4.612671990282104,
+            "backward": 8.730921755197222,
+            "per_epoch_whole": 174496.796875,
+            "inference_time": 133.00072733561197
+        },
+        "151": {
+            "forward": 4.573462093312135,
+            "backward": 8.770569226296955,
+            "per_epoch_whole": 175121.15625,
+            "inference_time": 131.71253628200955
+        },
+        "152": {
+            "forward": 4.629108239272655,
+            "backward": 8.759199428210811,
+            "per_epoch_whole": 175101.359375,
+            "inference_time": 132.72951422797308
+        },
+        "153": {
+            "forward": 3.0585945534225814,
+            "backward": 5.8807616484869385,
+            "per_epoch_whole": 101101.0078125,
+            "inference_time": 89.22976769341363
+        },
+        "154": {
+            "forward": 2.9023573307586874,
+            "backward": 5.673754856631644,
+            "per_epoch_whole": 94848.578125,
+            "inference_time": 91.58572472466363
+        },
+        "155": {
+            "forward": 2.9151702389683827,
+            "backward": 5.6882843783694605,
+            "per_epoch_whole": 95012.734375,
+            "inference_time": 94.08571370442709
+        },
+        "156": {
+            "forward": 2.9053605912945115,
+            "backward": 5.678407229838462,
+            "per_epoch_whole": 94821.3125,
+            "inference_time": 90.52071550157336
+        },
+        "157": {
+            "forward": 2.8734807035417753,
+            "backward": 5.6231441258587695,
+            "per_epoch_whole": 93556.484375,
+            "inference_time": 81.7770758734809
+        },
+        "158": {
+            "forward": 2.8857491656668546,
+            "backward": 5.620608675295252,
+            "per_epoch_whole": 93794.7109375,
+            "inference_time": 92.3629904852973
+        },
+        "159": {
+            "forward": 3.166249862358803,
+            "backward": 6.105813380906019,
+            "per_epoch_whole": 106574.9375,
+            "inference_time": 132.44796922471787
+        },
+        "160": {
+            "forward": 4.604726912703285,
+            "backward": 8.759752198343257,
+            "per_epoch_whole": 175136.15625,
+            "inference_time": 129.74876319037543
+        },
+        "161": {
+            "forward": 4.621889654701997,
+            "backward": 8.766749479684501,
+            "per_epoch_whole": 175289.578125,
+            "inference_time": 132.52843390570746
+        },
+        "162": {
+            "forward": 4.523056233268374,
+            "backward": 8.564321595960887,
+            "per_epoch_whole": 169852.953125,
+            "inference_time": 84.17197842068141
+        },
+        "163": {
+            "forward": 2.9231995665931585,
+            "backward": 5.7456886994038765,
+            "per_epoch_whole": 96112.296875,
+            "inference_time": 85.46939341227213
+        },
+        "164": {
+            "forward": 2.920895719028495,
+            "backward": 5.734704028187845,
+            "per_epoch_whole": 95943.46875,
+            "inference_time": 87.70389133029514
+        },
+        "165": {
+            "forward": 2.9055596135267807,
+            "backward": 5.639016354845608,
+            "per_epoch_whole": 94232.7421875,
+            "inference_time": 90.43588680691191
+        },
+        "166": {
+            "forward": 2.88586024053066,
+            "backward": 5.615875051247796,
+            "per_epoch_whole": 93796.5703125,
+            "inference_time": 89.45683966742621
+        },
+        "167": {
+            "forward": 2.9054995062887787,
+            "backward": 5.63277378569398,
+            "per_epoch_whole": 94104.3203125,
+            "inference_time": 83.74781205919055
+        },
+        "168": {
+            "forward": 2.8985729098887285,
+            "backward": 5.649167030461339,
+            "per_epoch_whole": 94412.3515625,
+            "inference_time": 87.3603981865777
+        },
+        "169": {
+            "forward": 3.8467906412595716,
+            "backward": 7.354885563310214,
+            "per_epoch_whole": 138805.9375,
+            "inference_time": 131.60178968641492
+        },
+        "170": {
+            "forward": 4.6191784479579985,
+            "backward": 8.796126846216213,
+            "per_epoch_whole": 175374.515625,
+            "inference_time": 132.0232204861111
+        },
+        "171": {
+            "forward": 4.626360883026734,
+            "backward": 8.784539615551568,
+            "per_epoch_whole": 175480.421875,
+            "inference_time": 132.02804565429688
+        },
+        "172": {
+            "forward": 3.801189665129546,
+            "backward": 7.363815214586434,
+            "per_epoch_whole": 138666.921875,
+            "inference_time": 86.34607950846353
+        },
+        "173": {
+            "forward": 2.924074267006188,
+            "backward": 5.704579647028915,
+            "per_epoch_whole": 95525.0,
+            "inference_time": 85.95546891954208
+        },
+        "174": {
+            "forward": 2.91103421359985,
+            "backward": 5.668166818268309,
+            "per_epoch_whole": 94942.0078125,
+            "inference_time": 85.49958886040582
+        },
+        "175": {
+            "forward": 2.900651572589927,
+            "backward": 5.639355820852514,
+            "per_epoch_whole": 94310.4609375,
+            "inference_time": 91.45696767171225
+        },
+        "176": {
+            "forward": 2.899591234310356,
+            "backward": 5.644964743326799,
+            "per_epoch_whole": 94333.25,
+            "inference_time": 88.86647457546658
+        },
+        "177": {
+            "forward": 2.89765126044733,
+            "backward": 5.6734599012275195,
+            "per_epoch_whole": 94595.9921875,
+            "inference_time": 85.75772433810764
+        },
+        "178": {
+            "forward": 2.910542833644565,
+            "backward": 5.6812361096809765,
+            "per_epoch_whole": 94878.7890625,
+            "inference_time": 86.72974650065106
+        },
+        "179": {
+            "forward": 4.571386419207255,
+            "backward": 8.669076074023048,
+            "per_epoch_whole": 172525.125,
+            "inference_time": 131.7845933702257
+        },
+        "180": {
+            "forward": 4.654564619040195,
+            "backward": 8.769001569706505,
+            "per_epoch_whole": 175362.703125,
+            "inference_time": 132.02774047851562
+        },
+        "181": {
+            "forward": 4.624933216329699,
+            "backward": 8.781189465288689,
+            "per_epoch_whole": 175570.46875,
+            "inference_time": 129.09727054172092
+        },
+        "182": {
+            "forward": 3.1327978143738147,
+            "backward": 6.065764902839449,
+            "per_epoch_whole": 105297.8828125,
+            "inference_time": 91.87110307481554
+        },
+        "183": {
+            "forward": 2.925743784054313,
+            "backward": 5.67303578163484,
+            "per_epoch_whole": 95282.8125,
+            "inference_time": 82.55598195393881
+        },
+        "184": {
+            "forward": 2.9199368503637366,
+            "backward": 5.673454088419836,
+            "per_epoch_whole": 95105.359375,
+            "inference_time": 76.65572696261934
+        },
+        "185": {
+            "forward": 2.9297057941180027,
+            "backward": 5.658524884692002,
+            "per_epoch_whole": 95066.8046875,
+            "inference_time": 87.52833302815755
+        },
+        "186": {
+            "forward": 2.9222283777321945,
+            "backward": 5.716359111670647,
+            "per_epoch_whole": 95727.28125,
+            "inference_time": 87.76968299018012
+        },
+        "187": {
+            "forward": 2.928371151569968,
+            "backward": 5.719681848479886,
+            "per_epoch_whole": 95743.5390625,
+            "inference_time": 89.83345031738281
+        },
+        "188": {
+            "forward": 3.594458597240076,
+            "backward": 6.928307002428617,
+            "per_epoch_whole": 127869.4609375,
+            "inference_time": 131.63012017144095
+        },
+        "189": {
+            "forward": 4.638356837917814,
+            "backward": 8.77706812957748,
+            "per_epoch_whole": 175325.453125,
+            "inference_time": 133.11045667860245
+        },
+        "190": {
+            "forward": 4.629514025292533,
+            "backward": 8.766333123601337,
+            "per_epoch_whole": 175330.671875,
+            "inference_time": 132.80059644911023
+        },
+        "191": {
+            "forward": 4.099597199793249,
+            "backward": 7.806394700544502,
+            "per_epoch_whole": 150172.078125,
+            "inference_time": 91.42874993218317
+        },
+        "192": {
+            "forward": 2.903249336276265,
+            "backward": 5.645819785853977,
+            "per_epoch_whole": 94328.5859375,
+            "inference_time": 87.26104566786023
+        },
+        "193": {
+            "forward": 2.898255955838619,
+            "backward": 5.66440529920828,
+            "per_epoch_whole": 94583.84375,
+            "inference_time": 88.10054863823785
+        },
+        "194": {
+            "forward": 2.906887063688494,
+            "backward": 5.662345450332673,
+            "per_epoch_whole": 94550.5546875,
+            "inference_time": 87.08186255560982
+        },
+        "195": {
+            "forward": 2.9070337122964203,
+            "backward": 5.690978645518079,
+            "per_epoch_whole": 94982.9140625,
+            "inference_time": 84.51301744249132
+        },
+        "196": {
+            "forward": 2.9113743782067614,
+            "backward": 5.674573498843042,
+            "per_epoch_whole": 94828.6640625,
+            "inference_time": 84.64312235514323
+        },
+        "197": {
+            "forward": 2.8854177190282972,
+            "backward": 5.632530779011613,
+            "per_epoch_whole": 93976.8125,
+            "inference_time": 90.14457024468317
+        },
+        "198": {
+            "forward": 4.1501955269825554,
+            "backward": 7.881928216062916,
+            "per_epoch_whole": 152046.671875,
+            "inference_time": 133.25960625542535
+        },
+        "199": {
+            "forward": 4.608401942436529,
+            "backward": 8.785381557150448,
+            "per_epoch_whole": 175573.828125,
+            "inference_time": 132.17867024739584
+        },
+        "200": {
+            "forward": 4.614645046998077,
+            "backward": 8.787658317424395,
+            "per_epoch_whole": 175477.453125,
+            "inference_time": 131.72805955674914
+        },
+        "201": {
+            "forward": 3.807977263160066,
+            "backward": 7.304836531236768,
+            "per_epoch_whole": 137556.40625,
+            "inference_time": 86.44918060302734
+        },
+        "202": {
+            "forward": 2.8894590770014195,
+            "backward": 5.635246201711497,
+            "per_epoch_whole": 94100.8125,
+            "inference_time": 86.70446692572699
+        },
+        "203": {
+            "forward": 2.9199378827183584,
+            "backward": 5.697068335737986,
+            "per_epoch_whole": 95071.078125,
+            "inference_time": 81.95962015787761
+        },
+        "204": {
+            "forward": 2.911425415991867,
+            "backward": 5.684546796491321,
+            "per_epoch_whole": 94941.546875,
+            "inference_time": 84.11502922905815
+        },
+        "205": {
+            "forward": 2.8988261767772046,
+            "backward": 5.663945134236222,
+            "per_epoch_whole": 94552.3125,
+            "inference_time": 87.91756863064236
+        },
+        "206": {
+            "forward": 2.8751579600089165,
+            "backward": 5.610794298294253,
+            "per_epoch_whole": 93567.2421875,
+            "inference_time": 85.67636617024739
+        },
+        "207": {
+            "forward": 2.8953411675325045,
+            "backward": 5.626586095710138,
+            "per_epoch_whole": 93942.5234375,
+            "inference_time": 86.63142395019531
+        },
+        "208": {
+            "forward": 4.2878282642369125,
+            "backward": 8.161938455214237,
+            "per_epoch_whole": 159631.078125,
+            "inference_time": 132.4675988091363
+        },
+        "209": {
+            "forward": 4.609709214932453,
+            "backward": 8.764915597237287,
+            "per_epoch_whole": 175212.6875,
+            "inference_time": 132.14492458767361
+        },
+        "210": {
+            "forward": 4.607638296659032,
+            "backward": 8.764739005952155,
+            "per_epoch_whole": 175281.890625,
+            "inference_time": 130.88233100043402
+        },
+        "211": {
+            "forward": 3.3961149280921097,
+            "backward": 6.567416970734933,
+            "per_epoch_whole": 117822.53125,
+            "inference_time": 85.30965423583984
+        },
+        "212": {
+            "forward": 2.903789196707664,
+            "backward": 5.6889807416611395,
+            "per_epoch_whole": 94891.203125,
+            "inference_time": 83.61774105495876
+        },
+        "213": {
+            "forward": 2.9084383099742976,
+            "backward": 5.6721124348037835,
+            "per_epoch_whole": 94818.96875,
+            "inference_time": 84.73656887478299
+        },
+        "214": {
+            "forward": 2.9068290547488362,
+            "backward": 5.641772861698927,
+            "per_epoch_whole": 94284.84375,
+            "inference_time": 87.06459977891711
+        },
+        "215": {
+            "forward": 2.89106124424073,
+            "backward": 5.651167134228743,
+            "per_epoch_whole": 94328.6328125,
+            "inference_time": 84.97570885552301
+        },
+        "216": {
+            "forward": 2.8902861883467184,
+            "backward": 5.645709030346038,
+            "per_epoch_whole": 94103.1796875,
+            "inference_time": 83.91169823540582
+        },
+        "217": {
+            "forward": 2.95404246612104,
+            "backward": 5.740601695596543,
+            "per_epoch_whole": 96717.3828125,
+            "inference_time": 128.94493187798395
+        },
+        "218": {
+            "forward": 4.614408600314676,
+            "backward": 8.757576153106294,
+            "per_epoch_whole": 175107.875,
+            "inference_time": 132.26756117078992
+        },
+        "219": {
+            "forward": 4.65499820335801,
+            "backward": 8.794777527528508,
+            "per_epoch_whole": 175751.015625,
+            "inference_time": 130.8247595893012
+        },
+        "220": {
+            "forward": 4.610314058294372,
+            "backward": 8.787355251540138,
+            "per_epoch_whole": 175656.46875,
+            "inference_time": 132.16436089409723
+        },
+        "221": {
+            "forward": 3.010667852524048,
+            "backward": 5.906520397445641,
+            "per_epoch_whole": 100271.4765625,
+            "inference_time": 81.08485666910806
+        },
+        "222": {
+            "forward": 2.929882615868024,
+            "backward": 5.719429097774752,
+            "per_epoch_whole": 96056.78125,
+            "inference_time": 85.31080627441406
+        },
+        "223": {
+            "forward": 2.9336502274195158,
+            "backward": 5.624467075890957,
+            "per_epoch_whole": 94832.1796875,
+            "inference_time": 87.8287090725369
+        },
+        "224": {
+            "forward": 2.90070833067088,
+            "backward": 5.650953717037195,
+            "per_epoch_whole": 94392.84375,
+            "inference_time": 87.36984168158637
+        },
+        "225": {
+            "forward": 2.9063635257691165,
+            "backward": 5.661325994502988,
+            "per_epoch_whole": 94605.21875,
+            "inference_time": 78.95805189344618
+        },
+        "226": {
+            "forward": 2.903085342626211,
+            "backward": 5.681157356864534,
+            "per_epoch_whole": 94864.4765625,
+            "inference_time": 86.99119652642145
+        },
+        "227": {
+            "forward": 3.6901113764530162,
+            "backward": 7.066098780215448,
+            "per_epoch_whole": 130740.671875,
+            "inference_time": 133.96445549858942
+        },
+        "228": {
+            "forward": 4.636311232747965,
+            "backward": 8.778011974588875,
+            "per_epoch_whole": 175272.984375,
+            "inference_time": 132.16859266493057
+        },
+        "229": {
+            "forward": 4.634786091027531,
+            "backward": 8.787996643043668,
+            "per_epoch_whole": 175578.671875,
+            "inference_time": 130.74591573079428
+        },
+        "230": {
+            "forward": 4.000862844272476,
+            "backward": 7.676894338649744,
+            "per_epoch_whole": 146893.65625,
+            "inference_time": 86.68625556098088
+        },
+        "231": {
+            "forward": 2.9170714512013283,
+            "backward": 5.670893978804685,
+            "per_epoch_whole": 94739.1953125,
+            "inference_time": 92.37249077690973
+        },
+        "232": {
+            "forward": 2.9143332077373683,
+            "backward": 5.660265718404911,
+            "per_epoch_whole": 94706.8671875,
+            "inference_time": 80.71953413221571
+        },
+        "233": {
+            "forward": 2.9028463907373143,
+            "backward": 5.650459004978937,
+            "per_epoch_whole": 94426.984375,
+            "inference_time": 88.09903377956815
+        },
+        "234": {
+            "forward": 2.9151256541268133,
+            "backward": 5.6452978507002625,
+            "per_epoch_whole": 94536.4296875,
+            "inference_time": 85.20751868353952
+        },
+        "235": {
+            "forward": 2.9154974734045784,
+            "backward": 5.667932425986896,
+            "per_epoch_whole": 94799.9296875,
+            "inference_time": 91.99355485704208
+        },
+        "236": {
+            "forward": 2.9259347303731698,
+            "backward": 5.676184013061996,
+            "per_epoch_whole": 95001.15625,
+            "inference_time": 90.90552520751952
+        },
+        "237": {
+            "forward": 4.322145274960672,
+            "backward": 8.190719257714703,
+            "per_epoch_whole": 160664.25,
+            "inference_time": 132.22320387098523
+        },
+        "238": {
+            "forward": 4.606295908741781,
+            "backward": 8.768179184345058,
+            "per_epoch_whole": 175361.53125,
+            "inference_time": 133.15006171332467
+        },
+        "239": {
+            "forward": 4.57820052601879,
+            "backward": 8.802591111600428,
+            "per_epoch_whole": 175740.421875,
+            "inference_time": 132.19450887044272
+        },
+        "240": {
+            "forward": 3.3658313246478917,
+            "backward": 6.465652821046398,
+            "per_epoch_whole": 115874.9296875,
+            "inference_time": 84.98424190945096
+        },
+        "241": {
+            "forward": 2.9160930058173213,
+            "backward": 5.660965477489725,
+            "per_epoch_whole": 94576.4375,
+            "inference_time": 85.89597235785591
+        },
+        "242": {
+            "forward": 2.893363378194469,
+            "backward": 5.634423136216295,
+            "per_epoch_whole": 94099.4765625,
+            "inference_time": 86.03939988878038
+        },
+        "243": {
+            "forward": 2.9198627118652998,
+            "backward": 5.645289222805756,
+            "per_epoch_whole": 94570.6875,
+            "inference_time": 81.95057423909505
+        },
+        "244": {
+            "forward": 2.9171322765072083,
+            "backward": 5.69132430753546,
+            "per_epoch_whole": 95115.21875,
+            "inference_time": 85.92418162027995
+        },
+        "245": {
+            "forward": 2.926946605810013,
+            "backward": 5.678733249539577,
+            "per_epoch_whole": 95083.140625,
+            "inference_time": 87.83710903591579
+        },
+        "246": {
+            "forward": 2.9712912503000193,
+            "backward": 5.763848323238847,
+            "per_epoch_whole": 97559.6171875,
+            "inference_time": 130.55392286512588
+        },
+        "247": {
+            "forward": 4.624422256818886,
+            "backward": 8.762357505840082,
+            "per_epoch_whole": 175280.875,
+            "inference_time": 132.73506842719183
+        },
+        "248": {
+            "forward": 4.593489218448553,
+            "backward": 8.786918307239066,
+            "per_epoch_whole": 175538.40625,
+            "inference_time": 131.87889268663196
+        },
+        "249": {
+            "forward": 4.625734965328344,
+            "backward": 8.791905769008517,
+            "per_epoch_whole": 175487.5,
+            "inference_time": 130.4822760687934
+        },
+        "250": {
+            "forward": 2.9518059398935477,
+            "backward": 5.691916565186866,
+            "per_epoch_whole": 95850.78125,
+            "inference_time": 85.67100779215494
+        },
+        "251": {
+            "forward": 2.8964040907358384,
+            "backward": 5.6239519640419,
+            "per_epoch_whole": 93914.5078125,
+            "inference_time": 83.39831119113498
+        },
+        "252": {
+            "forward": 2.9184649399300406,
+            "backward": 5.677825068925436,
+            "per_epoch_whole": 94879.3984375,
+            "inference_time": 82.83529663085938
+        },
+        "253": {
+            "forward": 2.9186922440321768,
+            "backward": 5.690051864585623,
+            "per_epoch_whole": 95107.0078125,
+            "inference_time": 83.79201507568358
+        },
+        "254": {
+            "forward": 2.9166309028981514,
+            "backward": 5.649627825020696,
+            "per_epoch_whole": 94586.984375,
+            "inference_time": 79.64886728922527
+        },
+        "255": {
+            "forward": 2.8839340846258814,
+            "backward": 5.637900995969231,
+            "per_epoch_whole": 94121.328125,
+            "inference_time": 83.4145745171441
+        },
+        "256": {
+            "forward": 3.3359485152787065,
+            "backward": 6.389311210267008,
+            "per_epoch_whole": 113743.125,
+            "inference_time": 131.64691501193576
+        },
+        "257": {
+            "forward": 4.634849470081963,
+            "backward": 8.762417005191567,
+            "per_epoch_whole": 175177.515625,
+            "inference_time": 131.94341617160376
+        },
+        "258": {
+            "forward": 4.620734999389105,
+            "backward": 8.757483632214335,
+            "per_epoch_whole": 175242.859375,
+            "inference_time": 133.09049309624567
+        },
+        "259": {
+            "forward": 4.381917740973472,
+            "backward": 8.310011519055278,
+            "per_epoch_whole": 163195.390625,
+            "inference_time": 85.9834738837348
+        },
+        "260": {
+            "forward": 2.9034552814338395,
+            "backward": 5.618987558848069,
+            "per_epoch_whole": 94122.015625,
+            "inference_time": 86.19508700900607
+        },
+        "261": {
+            "forward": 2.9251664069013277,
+            "backward": 5.668944319165744,
+            "per_epoch_whole": 94888.921875,
+            "inference_time": 90.83645968967015
+        },
+        "262": {
+            "forward": 2.9195430911455,
+            "backward": 5.670384231168437,
+            "per_epoch_whole": 94973.28125,
+            "inference_time": 84.78535461425781
+        },
+        "263": {
+            "forward": 2.8961108872266967,
+            "backward": 5.654862838029457,
+            "per_epoch_whole": 94423.9921875,
+            "inference_time": 90.35965050591363
+        },
+        "264": {
+            "forward": 2.890242453805209,
+            "backward": 5.636960205187452,
+            "per_epoch_whole": 94072.1875,
+            "inference_time": 83.71005079481337
+        },
+        "265": {
+            "forward": 2.898972871357385,
+            "backward": 5.641274863196103,
+            "per_epoch_whole": 94266.4375,
+            "inference_time": 88.0490960015191
+        },
+        "266": {
+            "forward": 3.8825180482632264,
+            "backward": 7.387304721772287,
+            "per_epoch_whole": 139491.15625,
+            "inference_time": 128.87115563286676
+        },
+        "267": {
+            "forward": 4.6371292016206045,
+            "backward": 8.808544338286602,
+            "per_epoch_whole": 175729.640625,
+            "inference_time": 133.68442620171442
+        },
+        "268": {
+            "forward": 4.637826387090718,
+            "backward": 8.77434469172142,
+            "per_epoch_whole": 175396.390625,
+            "inference_time": 133.33856709798175
+        },
+        "269": {
+            "forward": 3.8471363972733514,
+            "backward": 7.365879870962513,
+            "per_epoch_whole": 138597.296875,
+            "inference_time": 82.74896748860677
+        },
+        "270": {
+            "forward": 2.9363433500647877,
+            "backward": 5.692699113934499,
+            "per_epoch_whole": 95626.359375,
+            "inference_time": 83.58536444769965
+        },
+        "271": {
+            "forward": 2.9358065718881043,
+            "backward": 5.706715487077249,
+            "per_epoch_whole": 95595.8046875,
+            "inference_time": 88.64891899956598
+        },
+        "272": {
+            "forward": 2.896630390605023,
+            "backward": 5.618131811517223,
+            "per_epoch_whole": 93903.765625,
+            "inference_time": 85.85486518012154
+        },
+        "273": {
+            "forward": 2.878036476839908,
+            "backward": 5.627019942766319,
+            "per_epoch_whole": 93738.328125,
+            "inference_time": 89.24665662977431
+        },
+        "274": {
+            "forward": 2.89289995586508,
+            "backward": 5.622655074606331,
+            "per_epoch_whole": 93978.1640625,
+            "inference_time": 90.19867028130426
+        },
+        "275": {
+            "forward": 2.9064038325698123,
+            "backward": 5.669721249784811,
+            "per_epoch_whole": 94740.9453125,
+            "inference_time": 88.39474572075738
+        },
+        "276": {
+            "forward": 4.491532446800507,
+            "backward": 8.505454022379666,
+            "per_epoch_whole": 168364.265625,
+            "inference_time": 133.19099595811633
+        },
+        "277": {
+            "forward": 4.641764196159988,
+            "backward": 8.791171384820876,
+            "per_epoch_whole": 175631.171875,
+            "inference_time": 131.7623816596137
+        },
+        "278": {
+            "forward": 4.636698492471071,
+            "backward": 8.782829820258884,
+            "per_epoch_whole": 175578.4375,
+            "inference_time": 133.25665622287326
+        },
+        "279": {
+            "forward": 3.23073056259048,
+            "backward": 6.243956559291247,
+            "per_epoch_whole": 109712.6171875,
+            "inference_time": 82.61552259657118
+        },
+        "280": {
+            "forward": 2.9326099436015167,
+            "backward": 5.660948677416445,
+            "per_epoch_whole": 94972.46875,
+            "inference_time": 84.01510365804039
+        },
+        "281": {
+            "forward": 2.8857287659726594,
+            "backward": 5.642315891091515,
+            "per_epoch_whole": 93936.734375,
+            "inference_time": 83.25734032524957
+        },
+        "282": {
+            "forward": 2.897269114690527,
+            "backward": 5.628928598923612,
+            "per_epoch_whole": 93901.578125,
+            "inference_time": 88.34256913926866
+        },
+        "283": {
+            "forward": 2.8968922553714735,
+            "backward": 5.607818448303431,
+            "per_epoch_whole": 93806.6875,
+            "inference_time": 81.66490342881944
+        },
+        "284": {
+            "forward": 2.9210925939848935,
+            "backward": 5.687665096091592,
+            "per_epoch_whole": 95066.0625,
+            "inference_time": 85.98823801676434
+        },
+        "285": {
+            "forward": 3.0767891470015014,
+            "backward": 5.9688234830585865,
+            "per_epoch_whole": 102597.8515625,
+            "inference_time": 130.38148583306207
+        },
+        "286": {
+            "forward": 4.632334547027426,
+            "backward": 8.791585710158056,
+            "per_epoch_whole": 175677.828125,
+            "inference_time": 132.64122348361545
+        },
+        "287": {
+            "forward": 4.623638049858824,
+            "backward": 8.79956276672413,
+            "per_epoch_whole": 175864.6875,
+            "inference_time": 132.3777296278212
+        },
+        "288": {
+            "forward": 4.574376369266123,
+            "backward": 8.73769478796951,
+            "per_epoch_whole": 174373.46875,
+            "inference_time": 90.87589348687067
+        },
+        "289": {
+            "forward": 2.9025280168812793,
+            "backward": 5.635742387200036,
+            "per_epoch_whole": 94230.4140625,
+            "inference_time": 85.91915724012586
+        },
+        "290": {
+            "forward": 2.898939459324117,
+            "backward": 5.62969310015481,
+            "per_epoch_whole": 94038.5546875,
+            "inference_time": 87.59773423936633
+        },
+        "291": {
+            "forward": 2.9108321416277763,
+            "backward": 5.614266640142831,
+            "per_epoch_whole": 93853.2265625,
+            "inference_time": 83.57179429796008
+        },
+        "292": {
+            "forward": 2.917815222628658,
+            "backward": 5.688635731559333,
+            "per_epoch_whole": 95023.6484375,
+            "inference_time": 86.30941094292535
+        },
+        "293": {
+            "forward": 2.903074069798944,
+            "backward": 5.679662405871282,
+            "per_epoch_whole": 94891.953125,
+            "inference_time": 91.8080342610677
+        },
+        "294": {
+            "forward": 2.92143467361656,
+            "backward": 5.663445679755491,
+            "per_epoch_whole": 94762.8828125,
+            "inference_time": 81.49183993869357
+        },
+        "295": {
+            "forward": 3.5656567712151817,
+            "backward": 6.817382745901152,
+            "per_epoch_whole": 124458.8125,
+            "inference_time": 132.15496995713974
+        },
+        "296": {
+            "forward": 4.633336091640202,
+            "backward": 8.804054338149752,
+            "per_epoch_whole": 175806.25,
+            "inference_time": 133.05150689019095
+        },
+        "297": {
+            "forward": 4.589882106267803,
+            "backward": 8.783914801199932,
+            "per_epoch_whole": 175529.421875,
+            "inference_time": 130.85868665907117
+        },
+        "298": {
+            "forward": 4.420464359242672,
+            "backward": 8.415853563947717,
+            "per_epoch_whole": 166081.796875,
+            "inference_time": 85.47543419731987
+        },
+        "299": {
+            "forward": 2.9205419782854927,
+            "backward": 5.644038447704236,
+            "per_epoch_whole": 94610.4375,
+            "inference_time": 87.80261654324
+        },
+        "300": {
+            "forward": 2.9082527042847346,
+            "backward": 5.631549377147928,
+            "per_epoch_whole": 94193.5859375,
+            "inference_time": 91.10824924045137
+        }
+    },
+    "result": {
+        "0": 0,
+        "1": 19.96875207528855,
+        "2": 21.917900266552447,
+        "3": 21.686363280851317,
+        "4": 22.496299304382518,
+        "5": 23.212949805581317,
+        "6": 22.338498575854167,
+        "7": 22.44428628828858,
+        "8": 23.468873785449997,
+        "9": 23.445172369607853,
+        "10": 21.6201537629798,
+        "11": 24.665655657007182,
+        "12": 24.25014133277353,
+        "13": 24.857869147527673,
+        "14": 23.927124513505643,
+        "15": 25.373701938047073,
+        "16": 24.606670506082693,
+        "17": 25.773346013388707,
+        "18": 25.884898938166813,
+        "19": 26.261465392128688,
+        "20": 25.233396849857588,
+        "21": 26.12968324705271,
+        "22": 26.313144557008442,
+        "23": 27.10929646876746,
+        "24": 26.201698211777895,
+        "25": 26.500236047946288,
+        "26": 26.798905078478917,
+        "27": 25.43856596598272,
+        "28": 27.354026261664586,
+        "29": 24.745728088894026,
+        "30": 27.293183580024827,
+        "31": 24.873785301623023,
+        "32": 26.6691372790649,
+        "33": 26.59512901733845,
+        "34": 27.440567223346786,
+        "35": 25.098885194982554,
+        "36": 27.822070707635405,
+        "37": 27.600682305236816,
+        "38": 27.62479856573367,
+        "39": 27.486040918458883,
+        "40": 26.370922012114395,
+        "41": 27.68705353294648,
+        "42": 27.09771187551176,
+        "43": 28.216545453437544,
+        "44": 27.690764652715504,
+        "45": 28.857767863278323,
+        "46": 27.852345185726584,
+        "47": 28.47756212679814,
+        "48": 27.17364061111793,
+        "49": 28.255893485441746,
+        "50": 27.773697213023713,
+        "51": 26.43438017353749,
+        "52": 28.95738238760903,
+        "53": 29.222331973077345,
+        "54": 29.03779041398045,
+        "55": 28.23651326590401,
+        "56": 29.30683837137472,
+        "57": 26.649359479892716,
+        "58": 29.849063728856258,
+        "59": 29.716015809139705,
+        "60": 29.133546853109245,
+        "61": 29.066369416027378,
+        "62": 28.970402053741957,
+        "63": 29.306726278358187,
+        "64": 30.11824990691453,
+        "65": 29.02111070074793,
+        "66": 29.78646148631257,
+        "67": 29.337366677550328,
+        "68": 29.41758367899576,
+        "69": 28.309231493716716,
+        "70": 29.01211908795694,
+        "71": 29.469746237373677,
+        "72": 30.03697169149981,
+        "73": 29.823297460276056,
+        "74": 30.865553318705206,
+        "75": 30.97030895899191,
+        "76": 29.021934076837834,
+        "77": 29.816463275596966,
+        "78": 29.447928218601785,
+        "79": 30.43964062013567,
+        "80": 30.052959005237838,
+        "81": 31.168077607910302,
+        "82": 29.746590196334367,
+        "83": 31.4376371547839,
+        "84": 30.5542583557278,
+        "85": 31.16856804953455,
+        "86": 30.777953597701938,
+        "87": 30.266937018004473,
+        "88": 31.22508664056194,
+        "89": 31.105943362047626,
+        "90": 30.099299912108904,
+        "91": 32.30894827355081,
+        "92": 31.778112267146533,
+        "93": 30.780741740214125,
+        "94": 31.658514186379833,
+        "95": 29.908467291330762,
+        "96": 28.988238758234672,
+        "97": 30.112946092221804,
+        "98": 31.85047470059414,
+        "99": 31.142940974652547,
+        "100": 30.11800807521759,
+        "101": 30.159363825890313,
+        "102": 33.09236481908601,
+        "103": 30.67593211079802,
+        "104": 32.556138394022824,
+        "105": 31.409341183875718,
+        "106": 31.064819938091798,
+        "107": 31.42676080450515,
+        "108": 31.62560182628616,
+        "109": 33.565622832742456,
+        "110": 30.718154348857485,
+        "111": 30.85988624153273,
+        "112": 32.96873624407157,
+        "113": 32.74603939213743,
+        "114": 28.41018907175929,
+        "115": 33.09605599463452,
+        "116": 29.242486613771334,
+        "117": 32.75306920368841,
+        "118": 29.302777350884682,
+        "119": 32.509194065441456,
+        "120": 31.215870588402304,
+        "121": 32.04338599004007,
+        "122": 32.67122666469856,
+        "123": 31.000065990284504,
+        "124": 32.89669178643262,
+        "125": 31.7016263347126,
+        "126": 34.17241731412917,
+        "127": 33.62486149921742,
+        "128": 33.82996619087204,
+        "129": 32.92479919719855,
+        "130": 31.388248341180113,
+        "131": 34.099244945683864,
+        "132": 32.111102019843855,
+        "133": 32.65450363927913,
+        "134": 32.8649538104281,
+        "135": 33.49415495230821,
+        "136": 31.20148723113274,
+        "137": 34.463339176536046,
+        "138": 32.90038125848346,
+        "139": 34.62120386835905,
+        "140": 34.449279974758035,
+        "141": 31.36486726980234,
+        "142": 32.89569222615185,
+        "143": 34.371227308585034,
+        "144": 34.12572459817043,
+        "145": 33.30668548064729,
+        "146": 33.87153002094499,
+        "147": 34.571289871567316,
+        "148": 32.296625465742814,
+        "149": 36.233327516155214,
+        "150": 33.05997222307596,
+        "151": 32.18448408040823,
+        "152": 30.735914578785632,
+        "153": 34.7123342478894,
+        "154": 35.81100506793432,
+        "155": 34.40572880504388,
+        "156": 32.93176041168081,
+        "157": 34.93614684797078,
+        "158": 34.75857029322911,
+        "159": 32.760002551814544,
+        "160": 34.07606312550331,
+        "161": 32.277195673845256,
+        "162": 33.154036828855475,
+        "163": 36.86010485013665,
+        "164": 34.87850808691108,
+        "165": 33.650451873931075,
+        "166": 33.95826899581283,
+        "167": 33.374086103673655,
+        "168": 33.17792176668605,
+        "169": 34.574305210086536,
+        "170": 35.88108277581665,
+        "171": 32.04697666519609,
+        "172": 35.73721220282595,
+        "173": 35.95248541137088,
+        "174": 32.5010490641729,
+        "175": 35.757960133909705,
+        "176": 37.17401931310314,
+        "177": 37.258752383794715,
+        "178": 34.041679373603316,
+        "179": 35.73447120492967,
+        "180": 37.075035079031906,
+        "181": 35.90891554850666,
+        "182": 37.685552316534086,
+        "183": 36.48664754333896,
+        "184": 34.240888598995774,
+        "185": 33.16514987889111,
+        "186": 36.108961589252715,
+        "187": 36.198095302247694,
+        "188": 34.2019198772097,
+        "189": 34.216203532606215,
+        "190": 35.51307969555195,
+        "191": 34.27454695061184,
+        "192": 35.38433507206065,
+        "193": 36.84652325774026,
+        "194": 36.795896266023256,
+        "195": 35.88047691623065,
+        "196": 37.0441663137551,
+        "197": 36.08048358756074,
+        "198": 36.67618626416334,
+        "199": 34.693774473219264,
+        "200": 37.17071822653245,
+        "201": 36.015732092126356,
+        "202": 35.93929817778973,
+        "203": 36.6584298957216,
+        "204": 36.76072876021397,
+        "205": 33.794949089073356,
+        "206": 37.92981904494255,
+        "207": 36.73149953970639,
+        "208": 37.93437362464158,
+        "209": 36.246048813115706,
+        "210": 36.95602995800559,
+        "211": 36.01984720531823,
+        "212": 37.014827043309914,
+        "213": 35.00303061327564,
+        "214": 34.04767512007187,
+        "215": 37.75779359043908,
+        "216": 35.79104575575688,
+        "217": 36.221027639854825,
+        "218": 31.733740553208943,
+        "219": 35.583544994884704,
+        "220": 37.79077519502569,
+        "221": 37.7684114132408,
+        "222": 37.709668587487734,
+        "223": 33.81613674768249,
+        "224": 38.74174712861386,
+        "225": 37.11166536142073,
+        "226": 36.084892475763034,
+        "227": 36.72570708101163,
+        "228": 38.426710066013754,
+        "229": 38.56477721046091,
+        "230": 37.471750144601536,
+        "231": 37.52089481314826,
+        "232": 38.1284642846347,
+        "233": 36.76520055836991,
+        "234": 32.464334195457525,
+        "235": 37.49596167290206,
+        "236": 38.451158649617824,
+        "237": 37.30807819472858,
+        "238": 37.457717334233195,
+        "239": 38.815965318520114,
+        "240": 38.28020005495833,
+        "241": 34.923142026681276,
+        "242": 37.768337816680564,
+        "243": 38.71778813960177,
+        "244": 38.89451328908314,
+        "245": 37.40934850644592,
+        "246": 37.6877436515802,
+        "247": 38.12640794518841,
+        "248": 38.06327548766388,
+        "249": 37.118763743107735,
+        "250": 38.35814624814953,
+        "251": 37.41532869717385,
+        "252": 36.92648839497914,
+        "253": 37.87550209531486,
+        "254": 38.97790500975869,
+        "255": 38.423100978926215,
+        "256": 37.897347301294275,
+        "257": 38.05128358568745,
+        "258": 38.06095639332946,
+        "259": 37.41841867622066,
+        "260": 38.53297072125392,
+        "261": 38.68316442722014,
+        "262": 38.46660879851992,
+        "263": 37.240936509260884,
+        "264": 38.014530065437576,
+        "265": 37.20092524140878,
+        "266": 38.11884102583527,
+        "267": 38.3625988281019,
+        "268": 39.176029045079424,
+        "269": 38.6335628248626,
+        "270": 38.475642293341444,
+        "271": 37.75579722930084,
+        "272": 39.036213070773265,
+        "273": 38.613350795405715,
+        "274": 38.059373998628935,
+        "275": 38.87694008761044,
+        "276": 39.104313698598695,
+        "277": 38.15278388340513,
+        "278": 38.73762446014003,
+        "279": 38.78125749756766,
+        "280": 38.734557694233686,
+        "281": 38.63022238850145,
+        "282": 38.71623096614149,
+        "283": 38.95886111156612,
+        "284": 39.02162307664546,
+        "285": 39.09198211657248,
+        "286": 38.37433483926938,
+        "287": 39.26740743446469,
+        "288": 38.37928769751783,
+        "289": 38.97327605943721,
+        "290": 39.26078520302214,
+        "291": 39.311598807775006,
+        "292": 38.45541339051003,
+        "293": 38.863439726768966,
+        "294": 39.48749386548408,
+        "295": 38.36363753988305,
+        "296": 39.71490782445792,
+        "297": 39.61486103061573,
+        "298": 39.54484327639664,
+        "299": 39.387947173506774,
+        "300": 39.46282351823089
+    }
+}

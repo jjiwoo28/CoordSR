@@ -1,0 +1,25 @@
+{
+    "path": "beans",
+    "depth": 2,
+    "width": 256,
+    "coord_depth": 2,
+    "coord_width": 256,
+    "dataset_name": "knights",
+    "model_info": "relu",
+    "lr": 0.005,
+    "batch_size": 4,
+    "decom_dim": "us",
+    "R": 1,
+    "schdule_type": "linear",
+    "res_depth": 4,
+    "res_width": 64,
+    "after_network_type": "rgb",
+    "cnn_type": "dncnn",
+    "sr_scale": 8,
+    "pseudo_data_path": "/data/result/250227_teacher_/250227_teacher__relu_d8_w256_cd2_cd256_R2_8192_decom_dim_us_lr0.0005_knights_skip_connection_1/pseudo_data",
+    "coordx_model_path": "/data/result/250116_us_only_decom_down_scale/250116_us_only_decom_down_scale_relu_d0_w128_cd8_cd256_R1_8192_decom_dim_us_lr0.0005_knights",
+    "result": {
+        "0": 0
+    },
+    "result_time": {}
+}

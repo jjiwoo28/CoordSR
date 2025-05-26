@@ -1,0 +1,27 @@
+{
+    "path": "250317_debug_relu_d0_w128_cd8_cd256_R1_2_decom_dim_us_lr0.0005_knights_cnn_depth_4_cnn_width_64_after_network_type_feature_cnn_type_sr_pixel_shuffle_scale_8",
+    "depth": 0,
+    "width": 256,
+    "coord_depth": 8,
+    "coord_width": 256,
+    "dataset_name": "knights",
+    "model_info": "relu",
+    "lr": 0.0005,
+    "batch_size": 2,
+    "decom_dim": "us",
+    "R": 1,
+    "schdule_type": "linear",
+    "res_depth": 4,
+    "res_width": 64,
+    "after_network_type": "feature",
+    "cnn_type": "sr_pixel_shuffle",
+    "data_set": "knights",
+    "sr_scale": 8,
+    "pseudo_data_path": "/data/result/250227_teacher_/250227_teacher__relu_d8_w256_cd2_cd256_R2_8192_decom_dim_us_lr0.0005_knights_skip_connection_1/pseudo_data",
+    "coordx_model_path": "/data/result/250227_CoordX_down_scale/250227_CoordX_down_scale_relu_d0_w128_cd8_cd256_R1_8192_decom_dim_us_lr0.0005_knights_scale_8",
+    "after_network": "COORDX",
+    "result": {
+        "0": 0
+    },
+    "result_time": {}
+}

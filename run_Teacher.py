@@ -532,7 +532,7 @@ def run(opt):
     #breakpoint()
 
     if opt.render_only:
-        N = 10000  # 샘플링할 개수
+        N = 1000  # 샘플링할 개수
         rendering_inputs, xys = generate_random_coords(N, w, h)
 
         # 동영상 저장 설정

@@ -1,0 +1,20 @@
+{
+    "path": "250227_MLP_debug_relu_d8_w256_cd0_cd0_R2_8192_decom_dim_us_lr0.0005_knights_skip_connection_1",
+    "depth": 8,
+    "width": 0,
+    "coord_depth": 0,
+    "coord_width": 0,
+    "dataset_name": "knights",
+    "model_info": "relu",
+    "lr": 0.0005,
+    "batch_size": 8192,
+    "after_network": "MLP",
+    "decom_dim": "us",
+    "R": 2,
+    "schdule_type": "linear",
+    "sr_scale": 8,
+    "result": {
+        "0": 0
+    },
+    "result_time": {}
+}
